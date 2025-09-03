@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soundpad Pro • Output Select & VU • Bento</title>
+<style>
+  :root{ --bg:#0e1117; --panel:#161b22; --text:#e6edf3; --muted:#8b949e; --accent:#2ea043; --accent2:#388bfd; --danger:#f85149; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,Segoe UI,Roboto,Arial}
+  header{padding:16px;border-bottom:1px solid #30363d;background:var(--panel);position:sticky;top:0;z-index:5}
+  h1{margin:0;font-size:20px}
+  .wrap{max-width:1100px;margin:0 auto;padding:16px}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  input,button,select{padding:10px 12px;border-radius:10px;border:1px solid #30363d;background:#0d1117;color:var(--text);outline:none}
+  input::placeholder{color:var(--muted)}
+  button{cursor:pointer;background:var(--accent);border-color:#1f6f43}
+  button:hover{filter:brightness(1.06)}
+  button.secondary{background:var(--accent2);border-color:#2b6bd6}
+  button.ghost{background:#0d1117;border-color:#30363d}
+  button.danger{background:var(--danger);border-color:#8e2a28}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:16px}
+  .card{border:1px solid #30363d;background:var(--panel);border-radius:12px;padding:12px;display:grid;gap:8px}
+  .title{font-weight:700}
+  .muted{color:var(--muted);font-size:13px}
+  .audio-wrap{position:sticky;bottom:0;background:#0d1117;border-top:1px solid #30363d;padding:10px}
+  audio{width:100%}
+  .notice{border:1px dashed #30363d;background:#0d1117;color:var(--muted);border-radius:12px;padding:12px;margin-top:12px}
+  .unmute{padding:12px 16px;font-weight:800; background:#f0b90b; border-color:#b68900; color:#08110e}
+  canvas{display:block; width:100%; height:48px; background:#0b0f1a; border:1px solid #30363d; border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>🎶 Soundpad Pro • เลือกอุปกรณ์เสียง & VU Meter</h1>
+    <div class="row" style="margin-top:8px">
+      <input id="titleIn" placeholder="ชื่อปุ่ม (เช่น โอ้ว!)">
+      <input id="urlIn" placeholder="ลิงก์เสียง (Drive หรือ .mp3/.wav)">
+      <button id="add">เพิ่มปุ่ม</button>
+      <input id="q" placeholder="ค้นหา..." style="margin-left:auto;flex:1;min-width:200px">
+      <button id="export" class="ghost">คัดลอกคอนฟิก</button>
+      <button id="import" class="ghost">นำเข้าคอนฟิก</button>
+      <button id="reset" class="danger">รีเซ็ต</button>
+    </div>
+    <div class="notice">
+      ถ้าปุ่มเล่นได้แต่ <b>ไม่ดัง</b>: 1) กด <b>ปลดปิดเสียง/เริ่มระบบเสียง</b> ด้านล่างก่อน, 2) เลือก <b>อุปกรณ์เอาต์พุต</b> ให้ถูกช่อง (หูฟัง/ลำโพง/อินเตอร์เฟซ), 3) ดู VU meter ถ้ามีสัญญาณวิ่งแต่ไม่ยิน → ปรับเอาต์พุตของระบบ/Opera GX mixer
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="grid" class="grid"></div>
+</main>
+
+<div class="audio-wrap">
+  <div class="wrap">
+    <div class="row" style="gap:12px">
+      <button id="unmute" class="unmute">🔓 ปลดปิดเสียง/เริ่มระบบเสียง</button>
+      <label class="muted">เอาต์พุต:</label>
+      <select id="sinks"><option value="">ค่าเริ่มต้นของระบบ</option></select>
+      <label class="muted">โวลุ่ม</label>
+      <input type="range" id="vol" min="0" max="1" step="0.01" value="1">
+      <span id="volv" class="muted">100%</span>
+      <button id="tone" class="secondary">ทดสอบเสียง 440Hz</button>
+      <button id="stop" class="ghost">หยุด</button>
+    </div>
+    <audio id="player" controls preload="none" crossorigin="anonymous"></audio>
+    <canvas id="vu" width="1000" height="80"></canvas>
+  </div>
+</div>
+
+<script>
+(() => {
+  const $=s=>document.querySelector(s);
+  const grid=$("#grid"), q=$("#q"), add=$("#add"), titleIn=$("#titleIn"), urlIn=$("#urlIn");
+  const player=$("#player"), vol=$("#vol"), volv=$("#volv"), stopBtn=$("#stop");
+  const btnExport=$("#export"), btnImport=$("#import"), btnReset=$("#reset");
+  const unmuteBtn=$("#unmute"), sinks=$("#sinks"), toneBtn=$("#tone");
+  const vu=$("#vu"), ctx2d=vu.getContext('2d');
+  const LS_KEY="bento_soundpad_pro_v1";
+
+  let items=[]; // {title,url,tags?}
+  let ac=null, analyser=null, source=null, gainNode=null, osc=null;
+
+  function ensureAudio(){
+    if (!ac){
+      ac = new (window.AudioContext||window.webkitAudioContext)();
+      analyser = ac.createAnalyser(); analyser.fftSize = 2048;
+      gainNode = ac.createGain(); gainNode.gain.value = 1.0;
+      source = ac.createMediaElementSource(player);
+      source.connect(gainNode).connect(analyser).connect(ac.destination);
+      drawVU();
+    }
+    if (ac.state==="suspended"){ ac.resume(); }
+  }
+
+  function drawVU(){
+    const buf = new Uint8Array(analyser.frequencyBinCount);
+    function loop(){
+      requestAnimationFrame(loop);
+      analyser.getByteTimeDomainData(buf);
+      ctx2d.clearRect(0,0,vu.width,vu.height);
+      ctx2d.strokeStyle = "#72e28b"; ctx2d.lineWidth = 2;
+      ctx2d.beginPath();
+      for(let i=0;i<buf.length;i++){
+        const x = i / (buf.length-1) * vu.width;
+        const y = (buf[i]/255)*vu.height;
+        if(i===0) ctx2d.moveTo(x,y); else ctx2d.lineTo(x,y);
+      }
+      ctx2d.stroke();
+    }
+    loop();
+  }
+
+  async function listSinks(){
+    try{
+      const devs = await navigator.mediaDevices.enumerateDevices();
+      const outs = devs.filter(d=>d.kind==="audiooutput");
+      sinks.innerHTML = '<option value="">ค่าเริ่มต้นของระบบ</option>' + outs.map(d=>`<option value="${d.deviceId}">${d.label||"เอาต์พุตไม่มีชื่อ"}</option>`).join("");
+    }catch(e){ /* ignore */ }
+  }
+
+  sinks.addEventListener("change", async ()=>{
+    if (!player.setSinkId){ alert("เบราว์เซอร์นี้ยังไม่รองรับเลือกเอาต์พุต (setSinkId)"); return; }
+    try{
+      await player.setSinkId(sinks.value||"");
+    }catch(e){
+      alert("สลับเอาต์พุตไม่สำเร็จ: " + e.message);
+    }
+  });
+
+  unmuteBtn.onclick = async ()=>{
+    ensureAudio();
+    player.muted=false;
+    player.volume=parseFloat(vol.value||"1");
+    try{ await player.play(); player.pause(); }catch{}
+    await listSinks();
+    unmuteBtn.textContent = "✅ ระบบเสียงพร้อมแล้ว";
+    unmuteBtn.disabled = true;
+  };
+
+  toneBtn.onclick = ()=>{
+    ensureAudio();
+    if (osc){
+      osc.stop(); osc.disconnect(); osc=null; toneBtn.textContent="ทดสอบเสียง 440Hz";
+      return;
+    }
+    osc = ac.createOscillator();
+    osc.type = "sine"; osc.frequency.value = 440;
+    const og = ac.createGain(); og.gain.value = 0.2;
+    osc.connect(og).connect(ac.destination);
+    osc.start();
+    toneBtn.textContent = "หยุดโทนทดสอบ";
+  };
+
+  let playingIdx=-1;
+  function parseDrive(u){
+    try{
+      const x=new URL(u);
+      if (x.hostname.includes("drive.google.com")||x.hostname.includes("docs.google.com")){
+        const m=x.pathname.match(/\/file\/d\/([^/]+)/);
+        const id=m?m[1]:(x.searchParams.get("id")||"");
+        if (id){ return `https://docs.google.com/uc?export=open&id=${id}`; }
+      }
+    }catch{}
+    return u;
+  }
+
+  function save(){ localStorage.setItem(LS_KEY, JSON.stringify(items)); }
+  function load(){
+    try{ const raw=localStorage.getItem(LS_KEY); if (raw) items=JSON.parse(raw)||[]; }catch{}
+    if (items.length===0){
+      items=[
+        {title:"ตัวอย่างใน repo 1", url:"audio/sample1.mp3"},
+        {title:"ตัวอย่างใน repo 2", url:"audio/sample2.mp3"},
+        {title:"ตัวอย่าง CDN", url:"https://cdn.jsdelivr.net/gh/your-username/your-repo@main/audio/sample1.mp3"}
+      ];
+    }
+    render();
+  }
+
+  function play(url){
+    ensureAudio();
+    const src=parseDrive(url);
+    player.muted=false;
+    player.pause();
+    player.src=src;
+    player.currentTime=0;
+    player.volume=parseFloat(vol.value||"1");
+    player.play().catch(e=>console.warn("play failed", e));
+  }
+
+  function render(){
+    const term=(q.value||"").trim().toLowerCase();
+    grid.innerHTML="";
+    items.forEach((it,i)=>{
+      if (term){
+        const hit=(it.title||"").toLowerCase().includes(term) || (it.tags||[]).some(t=>(t||"").toLowerCase().includes(term));
+        if (!hit) return;
+      }
+      const card=document.createElement("div"); card.className="card";
+      const title=document.createElement("div"); title.className="title"; title.textContent=it.title||`เสียง ${i+1}`;
+      const url=document.createElement("div"); url.className="muted"; url.textContent=it.url;
+      const row=document.createElement("div"); row.className="row";
+      const bp=document.createElement("button"); bp.textContent="▶ เล่น"; bp.onclick=()=>play(it.url);
+      const be=document.createElement("button"); be.textContent="แก้ไข"; be.className="secondary";
+      const bd=document.createElement("button"); bd.textContent="ลบ"; bd.className="danger";
+      be.onclick=()=>{
+        const nt=prompt("ชื่อปุ่ม:", it.title||"") ?? it.title;
+        const nu=prompt("ลิงก์:", it.url||"") ?? it.url;
+        it.title=nt; it.url=nu; save(); render();
+      };
+      bd.onclick=()=>{ if(confirm("ลบปุ่มนี้?")){ items.splice(i,1); save(); render(); } };
+      row.appendChild(bp); row.appendChild(be); row.appendChild(bd);
+      card.appendChild(title); card.appendChild(url); card.appendChild(row);
+      grid.appendChild(card);
+    });
+    save();
+  }
+
+  // events
+  add.onclick=()=>{
+    const t=titleIn.value.trim()||"เสียงใหม่";
+    const u=urlIn.value.trim();
+    if (!u){ alert("ใส่ลิงก์ก่อน"); return; }
+    items.push({title:t, url:u});
+    titleIn.value=""; urlIn.value="";
+    save(); render();
+  };
+  q.oninput=render;
+  vol.oninput=()=>{ volv.textContent=Math.round(parseFloat(vol.value||"1")*100)+"%"; player.volume=parseFloat(vol.value||"1"); };
+  stopBtn.onclick=()=>{ player.pause(); player.currentTime=0; };
+  document.addEventListener("keydown",(e)=>{
+    const n=parseInt(e.key,10);
+    if(!isNaN(n)&&n>=1&&n<=9){ const it=items[n-1]; if(it) play(it.url); }
+  });
+  btnExport.onclick=()=>{
+    const json=JSON.stringify(items,null,2);
+    navigator.clipboard.writeText(json).then(()=>alert("คัดลอกคอนฟิกแล้ว"),()=>{ prompt("คัดลอกคอนฟิก:", json); });
+  };
+  btnImport.onclick=()=>{
+    const txt=prompt("วางคอนฟิก (JSON Array ของปุ่ม):","");
+    if(!txt) return;
+    try{ const data=JSON.parse(txt); if(Array.isArray(data)){ items=data; save(); render(); } else alert("รูปแบบต้องเป็น Array"); }
+    catch(e){ alert("อ่าน JSON ไม่ได้: "+e.message); }
+  };
+  btnReset.onclick=()=>{ if(confirm("รีเซ็ตทั้งหมด?")){ items=[]; save(); render(); } };
+
+  // init
+  load();
+})();
+</script>
+</body>
+</html>
