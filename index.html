@@ -192,11 +192,11 @@ ${err?.name||'Error'}
 
     // ====== เรนเดอร์ ======
     function applyBranding(){
-      const b = state.data.branding || {};
-      const title = b.title || 'Bubble Voice';
-      els.brandTitle.textContent = `🔊 ${title}`;
-      if(b.logo){ els.logo.src = b.logo; els.logo.style.display=''; }
-    };
+    const b = state.data.branding || {};
+    const title = b.title || 'Bubble Voice';
+    els.brandTitle.textContent = `🔊 ${title}`;
+    if(b.logo){ els.logo.src = b.logo; els.logo.style.display=''; }
+  }
       if(b.title){ els.brandTitle.textContent = `🔊 ${b.title}`; }
       if(b.logo){ els.logo.src = b.logo; els.logo.style.display=''; }
     
