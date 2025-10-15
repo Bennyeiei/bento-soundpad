@@ -1,5 +1,9 @@
-const CACHE_NAME = 'bubble-voice-v1';
-const CORE_ASSETS = ['./','./index.html','./manifest.webmanifest','./sounds.json'];
+const CACHE_NAME = 'bubble-voice-v2';
+const CORE_ASSETS = [
+  './',
+  './manifest.webmanifest',
+  './sounds.json'   // ไม่แคช index.html
+];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(CORE_ASSETS)));
