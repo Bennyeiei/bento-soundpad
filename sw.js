@@ -1,9 +1,10 @@
-const CACHE_NAME = 'bubble-voice-v2';
+const CACHE_NAME = 'bubble-voice-v4'; // bump เวอร์ชัน
 const CORE_ASSETS = [
   './',
   './manifest.webmanifest',
-  './sounds.json'   // ไม่แคช index.html
+  './sounds.json' // อย่าใส่ './index.html'
 ];
+
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(CORE_ASSETS)));
