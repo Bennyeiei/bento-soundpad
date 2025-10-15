@@ -122,9 +122,9 @@
     };
 
     // ====== โหลดข้อมูล ======
-    async function loadData(){
+  async function loadData(){
   try{
-    const url = 'sounds.json?ts=' + Date.now();   // <— กัน cache
+    const url = 'sounds.json?ts=' + Date.now();   // กันแคช
     const res = await fetch(url, { cache: 'no-store' });
     if(!res.ok) throw new Error('no manifest');
     return await res.json();
@@ -133,6 +133,7 @@
     return SOUNDS_FALLBACK;
   }
 }
+
 
 
     // ====== Helpers ======
