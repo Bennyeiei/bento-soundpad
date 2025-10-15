@@ -1,0 +1,22 @@
+{
+  "branding": {
+    "title": "Bento Soundpad",
+    "logo": "logo.png",
+    "cover": "cover.jpg",
+    "accent": "#41d1ff"
+  },
+  "categories": [
+    {
+      "id": "audio",
+      "name": "Audio",
+      "sounds": [
+        {
+          "name": "เสี่ยวขุ่ย",
+          "file": "audio/เสี่ยวขุ่ย.mp3",
+          "hotkey": "1",
+          "color": "red"
+        }
+      ]
+    }
+  ]
+}
