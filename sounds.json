@@ -7,12 +7,12 @@
   },
   "categories": [
     {
-      "id": "audio",
-      "name": "Audio",
+      "id": "kkm15",
+      "name": "kkm15",
       "sounds": [
         {
           "name": "เสี่ยวขุ่ย",
-          "file": "audio/เสี่ยวขุ่ย.mp3",
+          "file": "audio/kkm15/เสี่ยวขุ่ย.mp3",
           "hotkey": "1",
           "color": "red"
         }
