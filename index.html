@@ -123,15 +123,17 @@
 
     // ====== โหลดข้อมูล ======
     async function loadData(){
-      try{
-        const res = await fetch('sounds.json', {cache:'no-store'});
-        if(!res.ok) throw new Error('no manifest');
-        return await res.json();
-      }catch(e){
-        console.warn('ใช้ SOUNDS_FALLBACK เพราะโหลด sounds.json ไม่ได้', e);
-        return SOUNDS_FALLBACK;
-      }
-    }
+  try{
+    const url = 'sounds.json?ts=' + Date.now();   // <— กัน cache
+    const res = await fetch(url, { cache: 'no-store' });
+    if(!res.ok) throw new Error('no manifest');
+    return await res.json();
+  }catch(e){
+    console.warn('ใช้ SOUNDS_FALLBACK เพราะโหลด sounds.json ไม่ได้', e);
+    return SOUNDS_FALLBACK;
+  }
+}
+
 
     // ====== Helpers ======
     function h(tag, attrs={}, ...children){
