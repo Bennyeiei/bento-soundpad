@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bento Soundpad</title>
+  <meta name="description" content="เว็บ Soundpad แบบกดเล่นได้สำหรับทีมพากย์ — รองรับหมวดหมู่/ค้นหา/ฮอตคีย์/เล่นซ้อน/หยุดทั้งหมด พร้อมโลโก้/ภาพปก และโหมดแก้ไขส่งออก sounds.json" />
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#111823; --card:#0d1522; --acc:#41d1ff; --muted:#9fb3c8; --text:#e6f0ff; --ring:#2b6cb0;
+      --pad-red1:#a80b0b; --pad-red2:#eb2c2c; --pad-green1:#0d6d26; --pad-green2:#35c75a; --pad-blue1:#114b7a; --pad-blue2:#2ea2ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(120deg,#0b0f14,#0e141d 60%,#0b0f14);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans Thai',sans-serif}
+    header{position:sticky;top:0;z-index:30;background:rgba(17,24,35,.9);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #182335}
+    .wrap{max-width:1200px;margin:0 auto;padding:12px 16px}
+    h1{margin:0;font-size:20px;letter-spacing:.3px;display:flex;align-items:center;gap:10px}
+    .logo{width:28px;height:28px;border-radius:6px;object-fit:contain;background:#0e1622;border:1px solid #1e2c43}
+    .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    input[type="search"], select, .btn{background:#0e1622;color:var(--text);border:1px solid #1e2c43;border-radius:12px;padding:10px 12px;font-size:14px}
+    input[type="search"]{flex:1;min-width:180px}
+    .btn{cursor:pointer;user-select:none}
+    .btn:hover{border-color:#294061}
+    .btn.primary{background:linear-gradient(180deg,#133250,#0e1f34);border-color:#254467}
+    .btn.ghost{background:transparent;border-color:#1e2c43}
+    .btn:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+    .switch{display:inline-flex;align-items:center;gap:8px}
+    .switch input{accent-color:var(--acc)}
+
+    .hero{position:relative}
+    .hero .cover{width:100%;height:180px;object-fit:cover;display:block;filter:saturate(110%);}
+    .hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,18,26,.1),rgba(11,15,20,.8));}
+    .hero .title{position:absolute;left:16px;bottom:14px;font-size:22px;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+
+    main{max-width:1200px;margin:10px auto;padding:16px}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+    .tab{padding:6px 12px;border-radius:999px;border:1px solid #22314b;background:#0f1724;cursor:pointer;color:var(--muted)}
+    .tab.active{color:#09121c;background:#72e0ff;border-color:#72e0ff;font-weight:600}
+    .tabshare{margin-left:auto}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px}
+    .card{background:linear-gradient(180deg,#0c1420,#0a1018);border:1px solid #1b2a40;border-radius:16px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:10px}
+    .card h3{font-size:14px;margin:0;color:#e8f3ff;line-height:1.2;text-align:center}
+    .meta{font-size:12px;color:#9fb3c8;text-align:center}
+
+    /* ปุ่มใหญ่แบบ myinstants */
+    .pad{width:140px;height:140px;border-radius:999px;border:none;position:relative;display:grid;place-items:center;cursor:pointer;box-shadow:inset 0 -6px 0 rgba(0,0,0,.35), 0 6px 16px rgba(0,0,0,.35);}
+    .pad.red{background:radial-gradient(35% 35% at 50% 30%, #ff8c8c, #ff3d3d 60%, #c11414 80%), linear-gradient(180deg,var(--pad-red2),var(--pad-red1));}
+    .pad.green{background:radial-gradient(35% 35% at 50% 30%, #a7ffb7, #52e47a 60%, #138f32 80%), linear-gradient(180deg,var(--pad-green2),var(--pad-green1));}
+    .pad.blue{background:radial-gradient(35% 35% at 50% 30%, #a6d8ff, #64b9ff 60%, #1766a8 80%), linear-gradient(180deg,var(--pad-blue2),var(--pad-blue1));}
+    .pad:active{transform:translateY(1px)}
+    .pad img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:999px;opacity:.9;mix-blend:screen;filter:saturate(130%)}
+    .pad span.play{font-size:30px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+
+    .pill{background:#0e1b2b;border:1px solid #1b2d47;color:#a7c1db;border-radius:999px;padding:4px 8px;font-size:12px}
+    .vol{display:flex;align-items:center;gap:8px}
+    .vol input{width:140px}
+    .footer{opacity:.7;font-size:12px;margin-top:10px}
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;background:#0d1624;border:1px solid #1f2e4a;border-bottom-width:2px;border-radius:6px;padding:2px 6px}
+
+    /* แพเนลแก้ไข (Editor) */
+    .fab{position:fixed;right:16px;bottom:16px;z-index:50}
+    .fab .btn{border-radius:999px;padding:14px 16px;font-size:16px}
+    .panel{position:fixed;inset:auto 0 0 auto;right:0;top:0;height:100%;width:min(520px,100%);background:#0b121c;border-left:1px solid #1a2a44;box-shadow:-8px 0 18px rgba(0,0,0,.45);transform:translateX(100%);transition:.25s;z-index:40}
+    .panel.open{transform:translateX(0)}
+    .panel .head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #152235}
+    .panel .body{padding:12px 16px;display:grid;gap:12px;max-height:calc(100% - 110px);overflow:auto}
+    .panel label{font-size:12px;color:#a9bed6}
+    .panel input,.panel select,.panel textarea{width:100%;background:#0e1622;color:var(--text);border:1px solid #1e2c43;border-radius:10px;padding:8px 10px;font-size:14px}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .small{font-size:12px;color:#9fb3c8}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="row">
+        <h1 style="flex:1">
+          <img id="logo" class="logo" src="logo.png" alt="logo" onerror="this.style.display='none'"/>
+          <span id="brandTitle">🔊 Bento Soundpad</span>
+        </h1>
+        <div class="vol"><span>🔉</span><input id="volume" type="range" min="0" max="1" step="0.01" value="1" aria-label="ปรับเสียง"/></div>
+        <div class="vol"><span>⏩</span><input id="speed" type="range" min="0.6" max="1.25" step="0.05" value="1" aria-label="ความเร็ว"/></div>
+        <button id="stopAll" class="btn ghost" aria-label="หยุดทั้งหมด (Space)">⏹️ Stop</button>
+        <label class="switch"><input type="checkbox" id="cutMode" checked/> <spanโหมด Solo</span></label>
+        <label class="switch"><input type="checkbox" id="haptic"/> <span>สั่นเมื่อกด</span></label>
+        <label class="switch"><input type="checkbox" id="wakelock"/> <span>ไม่ให้หน้าจอดับ</span></label>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <input id="search" type="search" placeholder="ค้นหาเสียง / กด 1–9 เพื่อเล่น" aria-label="ค้นหาเสียง" />
+        <select id="categorySelect" aria-label="เลือกหมวด"></select>
+        <button id="share" class="btn" aria-label="คัดลอกลิงก์หน้าปัจจุบัน">🔗 แชร์</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img id="cover" class="cover" src="cover.jpg" alt="cover" onerror="this.style.display='none'"/>
+    <div class="overlay"></div>
+    <div class="title" id="heroTitle">Soundboard</div>
+  </section>
+
+  <main>
+    <div class="tabs" id="tabs"></div>
+    <div class="grid" id="grid" role="list"></div>
+    <div class="footer wrap">Tips: <span class="kbd">1–9</span> เล่นไอเท็มที่เห็น | <span class="kbd">Space</span> หยุดทั้งหมด | เล่นซ้อนหลายเสียงได้ (ปิด "โหมดตัดเสียงเก่า")</div>
+  </main>
+
+  <!-- ปุ่มเปิดโหมดแก้ไข -->
+  <div class="fab"><button id="openEditor" class="btn primary" title="โหมดแก้ไข (Editor)">🛠️ แก้ไข</button></div>
+
+  <!-- แพเนลแก้ไข/สร้าง manifest -->
+  <aside id="editor" class="panel" aria-hidden="true">
+    <div class="head">
+      <strong>Editor: จัดการโลโก้/ปก/หมวด/เสียง</strong>
+      <div>
+        <button id="exportJson" class="btn">💾 Export sounds.json</button>
+        <button id="closeEditor" class="btn ghost">ปิด</button>
+      </div>
+    </div>
+    <div class="body">
+      <div>
+        <label>แบรนดิ้ง</label>
+        <div class="row2">
+          <div>
+            <label class="small">ชื่อบนหัวเว็บ</label>
+            <input id="brandInput" placeholder="Bento Soundpad"/>
+          </div>
+          <div>
+            <label class="small">สีหลัก (accent)</label>
+            <input id="accentInput" placeholder="#41d1ff"/>
+          </div>
+        </div>
+        <div class="row2">
+          <div>
+            <label class="small">โลโก้ (พาธ/URL เช่น logo.png)</label>
+            <input id="logoInput" placeholder="logo.png"/>
+          </div>
+          <div>
+            <label class="small">ภาพปก (พาธ/URL เช่น cover.jpg)</label>
+            <input id="coverInput" placeholder="cover.jpg"/>
+          </div>
+        </div>
+      </div>
+
+      <hr style="border-color:#152235;border-style:solid"/>
+
+      <div>
+        <label>เพิ่มหมวด</label>
+        <div class="row2">
+          <input id="newCatId" placeholder="เช่น memes"/>
+          <input id="newCatName" placeholder="ชื่อแสดงผล เช่น Memes"/>
+        </div>
+        <button id="addCat" class="btn">➕ เพิ่มหมวด</button>
+      </div>
+
+      <div>
+        <label>เพิ่มเสียงในหมวดที่เลือก</label>
+        <div class="row2">
+          <input id="soundName" placeholder="ชื่อเสียง เช่น Bruh"/>
+          <input id="soundFile" placeholder="ไฟล์/URL เช่น audio/memes/bruh.mp3"/>
+        </div>
+        <div class="row2">
+          <input id="soundHotkey" placeholder="ฮอตคีย์ (ไม่บังคับ)"/>
+          <select id="soundColor">
+            <option value="red">ปุ่มแดง</option>
+            <option value="green">ปุ่มเขียว</option>
+            <option value="blue">ปุ่มน้ำเงิน</option>
+          </select>
+        </div>
+        <input id="soundImage" placeholder="ภาพวงกลมบนปุ่ม (ไม่บังคับ) เช่น images/bruh.png"/>
+        <button id="addSound" class="btn">➕ เพิ่มเสียง</button>
+        <div class="small">* หมายเหตุ: ตัวแก้ไขนี้ไม่อัปโหลดไฟล์ขึ้น GitHub ให้ — มันช่วยจัดทำ <code>sounds.json</code> ให้พร้อม แล้วคุณค่อยอัปไฟล์เสียง/รูปขึ้น repo เอง</div>
+      </div>
+
+      <div>
+        <label>นำเข้า sounds.json</label>
+        <input id="importJson" type="file" accept="application/json"/>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    // ====== ตั้งค่า/โครงสร้างข้อมูล ======
+    // โครงสร้าง sounds.json ที่แนะนำ:
+    // {
+    //   "branding": { "title":"Bento Soundpad", "logo":"logo.png", "cover":"cover.jpg", "accent":"#41d1ff" },
+    //   "categories": [
+    //     {"id": "memes", "name": "Memes", "sounds": [
+    //       {"name": "Bruh", "file": "audio/memes/bruh.mp3", "hotkey": "1", "color":"red", "image":"images/bruh.png"}
+    //     ]}
+    //   ]
+    // }
+
+    const SOUNDS_FALLBACK = {
+      branding: { title:'Bento Soundpad', logo:'logo.png', cover:'cover.jpg', accent:'#41d1ff' },
+      categories: [
+        { id: 'memes', name: 'Memes', sounds: [
+          { name: 'Bruh', file: 'audio/memes/bruh.mp3', hotkey: '1', color:'red' },
+          { name: 'WompWomp', file: 'audio/memes/wompwomp.mp3', hotkey: '2', color:'red' }
+        ]},
+        { id: 'sfx', name: 'SFX', sounds: [
+          { name: 'Whoosh', file: 'audio/sfx/whoosh.wav', hotkey: '3', color:'blue' },
+          { name: 'Hit', file: 'audio/sfx/hit.wav', hotkey: '4', color:'green' }
+        ]}
+      ]
+    };
+
+    const els = {
+      tabs: document.getElementById('tabs'),
+      grid: document.getElementById('grid'),
+      search: document.getElementById('search'),
+      select: document.getElementById('categorySelect'),
+      volume: document.getElementById('volume'),
+      speed: document.getElementById('speed'),
+      haptic: document.getElementById('haptic'),
+      wakelock: document.getElementById('wakelock'),
+      stopAll: document.getElementById('stopAll'),
+      cutMode: document.getElementById('cutMode'),
+      share: document.getElementById('share'),
+      brandTitle: document.getElementById('brandTitle'),
+      logo: document.getElementById('logo'),
+      cover: document.getElementById('cover'),
+      heroTitle: document.getElementById('heroTitle'),
+      // editor
+      openEditor: document.getElementById('openEditor'),
+      editor: document.getElementById('editor'),
+      closeEditor: document.getElementById('closeEditor'),
+      exportJson: document.getElementById('exportJson'),
+      brandInput: document.getElementById('brandInput'),
+      accentInput: document.getElementById('accentInput'),
+      logoInput: document.getElementById('logoInput'),
+      coverInput: document.getElementById('coverInput'),
+      newCatId: document.getElementById('newCatId'),
+      newCatName: document.getElementById('newCatName'),
+      addCat: document.getElementById('addCat'),
+      soundName: document.getElementById('soundName'),
+      soundFile: document.getElementById('soundFile'),
+      soundHotkey: document.getElementById('soundHotkey'),
+      soundColor: document.getElementById('soundColor'),
+      soundImage: document.getElementById('soundImage'),
+      addSound: document.getElementById('addSound'),
+      importJson: document.getElementById('importJson'),
+    };
+
+    const state = {
+      data: null,
+      category: 'all',
+      search: '',
+      volume: 1,
+      speed: 1,
+      active: new Set(),
+    };
+
+    // ====== โหลดข้อมูล ======
+    async function loadData(){
+      try{
+        const res = await fetch('sounds.json', {cache:'no-store'});
+        if(!res.ok) throw new Error('no manifest');
+        return await res.json();
+      }catch(e){
+        console.warn('ใช้ SOUNDS_FALLBACK เพราะโหลด sounds.json ไม่ได้', e);
+        return SOUNDS_FALLBACK;
+      }
+    }
+
+    // ====== UI helpers ======
+    function h(tag, attrs={}, ...children){
+      const el = document.createElement(tag);
+      for(const [k,v] of Object.entries(attrs||{})){
+        if(k.startsWith('on') && typeof v === 'function') el[k.toLowerCase()] = v;
+        else if(k==='dataset') for(const [dk,dv] of Object.entries(v)) el.dataset[dk] = dv;
+        else if(v === true) el.setAttribute(k, '');
+        else if(v !== false && v != null) el.setAttribute(k, v);
+      }
+      for(const c of children.flat()){
+        if(c == null) continue;
+        el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+      }
+      return el;
+    }
+
+    function setHash(){
+      const params = new URLSearchParams();
+      if(state.category && state.category !== 'all') params.set('cat', state.category);
+      if(state.search) params.set('q', state.search);
+      history.replaceState(null, '', params.toString() ? `?${params}` : location.pathname);
+    }
+    function readHash(){
+      const p = new URLSearchParams(location.search);
+      state.category = p.get('cat') || 'all';
+      state.search = p.get('q') || '';
+    }
+
+    // ====== เสียง ======
+    function makeAudio(src){
+      const a = new Audio(src);
+      a.preload = 'none';
+      a.volume = state.volume;
+      a.playbackRate = state.speed;
+      a.addEventListener('ended', () => state.active.delete(a));
+      a.addEventListener('pause', () => state.active.delete(a));
+      return a;
+    }
+    function playSound(src){
+      if(els.cutMode.checked){ stopAll(); }
+      if(els.haptic && els.haptic.checked && navigator.vibrate){ navigator.vibrate(15); }
+      const a = makeAudio(src);
+      state.active.add(a);
+      a.play().catch(err=>{
+        console.warn('เล่นเสียงไม่สำเร็จ:', err);
+        alert('เบราว์เซอร์บล็อกการเล่นอัตโนมัติ ต้องมีการคลิกก่อน (autoplay policy)');
+      });
+    }
+    function stopAll(){
+      for(const a of Array.from(state.active)){
+        try{ a.pause(); a.currentTime = 0; }catch{}
+      }
+      state.active.clear();
+    }
+
+    // ====== เรนเดอร์ ======
+    function applyBranding(){
+      const b = state.data.branding || {};
+      if(b.title){ els.brandTitle.textContent = b.title; els.heroTitle.textContent = b.title; }
+      if(b.logo){ els.logo.src = b.logo; els.logo.style.display=''; }
+      if(b.cover){ els.cover.src = b.cover; els.cover.style.display=''; }
+      if(b.accent){ document.documentElement.style.setProperty('--acc', b.accent); }
+
+      // เติมใน editor
+      els.brandInput.value = b.title || '';
+      els.accentInput.value = b.accent || '';
+      els.logoInput.value = b.logo || '';
+      els.coverInput.value = b.cover || '';
+    }
+
+    function renderTabs(){
+      els.tabs.innerHTML = '';
+      const all = h('button', {class:'tab '+(state.category==='all'?'active':''), onclick:()=>{state.category='all';setHash(); renderAll();}}, 'ทั้งหมด');
+      const shareAll = h('button', {class:'tab tabshare btn ghost', onclick:()=>shareLink() }, '🔗 แชร์มุมมองนี้');
+      els.tabs.append(all, shareAll);
+      state.data.categories.forEach(cat=>{
+        const b = h('button', {class:'tab '+(state.category===cat.id?'active':''), onclick:()=>{state.category=cat.id;setHash();renderAll();}}, cat.name);
+        const s = h('button', {class:'tab', onclick:()=>shareLink(cat.id)}, '🔗');
+        els.tabs.append(b,s);
+      });
+    }
+
+    function renderSelect(){
+      els.select.innerHTML = '';
+      els.select.appendChild(h('option', {value:'all'}, 'ทั้งหมด'));
+      state.data.categories.forEach(cat=> els.select.appendChild(h('option', {value:cat.id}, cat.name)) );
+      els.select.value = state.category;
+    }
+
+    function filterSounds(){
+      const q = state.search.trim().toLowerCase();
+      const showCat = state.category;
+      const list = [];
+      for(const cat of state.data.categories){
+        if(showCat !== 'all' && cat.id !== showCat) continue;
+        for(const s of cat.sounds){
+          const name = (s.name||'').toLowerCase();
+          if(!q || name.includes(q)) list.push({...s, _cat: cat});
+        }
+      }
+      return list;
+    }
+
+    function renderGrid(){
+      els.grid.innerHTML = '';
+      const sounds = filterSounds();
+      sounds.forEach((s)=>{
+        const pad = h('button', {class:'pad '+(s.color||'red'), onclick:()=>playSound(s.file), 'aria-label':`เล่นเสียง ${s.name}`}, [
+          s.image ? h('img', {class:'bg', src:s.image, alt:''}) : null,
+          h('span', {class:'play'}, '▶')
+        ]);
+        const shareBtn = h('button', {class:'btn ghost', onclick:()=>shareSound(s)}, '🔗 แชร์เสียงนี้');
+        const item = h('div', {class:'card', role:'listitem'},[
+          pad,
+          h('h3', {}, s.name || 'ไม่มีชื่อ'),
+          $1
+          (s.note ? h('div', {class:'meta'}, s.note) : null),
+          h('div', {}, [shareBtn])
+        ]);
+        els.grid.appendChild(item);
+      });
+    }
+
+    function renderAll(){
+      applyBranding();
+      renderTabs();
+      renderSelect();
+      els.search.value = state.search;
+      renderGrid();
+    }
+
+    // ====== แชร์ลิงก์ ======
+    function shareLink(catId){
+      const params = new URLSearchParams(location.search);
+      if(catId){ params.set('cat', catId); } else if(state.category && state.category!=='all'){ params.set('cat', state.category); } else { params.delete('cat'); }
+      if(state.search){ params.set('q', state.search); } else { params.delete('q'); }
+      const url = location.origin + location.pathname + (params.toString()?`?${params}`:'');
+      navigator.clipboard.writeText(url).then(()=> alert('คัดลอกลิงก์แล้ว'));
+    }
+    function shareSound(s){
+      const params = new URLSearchParams();
+      if(s._cat?.id) params.set('cat', s._cat.id);
+      params.set('q', s.name);
+      const url = location.origin + location.pathname + `?${params}`;
+      navigator.clipboard.writeText(url).then(()=> alert('คัดลอกลิงก์แล้ว'));
+    }
+
+    // ====== Editor ======
+    function refreshEditorInputs(){
+      const b = state.data.branding || {};
+      els.brandInput.value = b.title || '';
+      els.accentInput.value = b.accent || '';
+      els.logoInput.value = b.logo || '';
+      els.coverInput.value = b.cover || '';
+    }
+
+    function openEditor(){ els.editor.classList.add('open'); els.editor.setAttribute('aria-hidden','false'); refreshEditorInputs(); }
+    function closeEditor(){ els.editor.classList.remove('open'); els.editor.setAttribute('aria-hidden','true'); }
+
+    els.openEditor.addEventListener('click', openEditor);
+    els.closeEditor.addEventListener('click', closeEditor);
+
+    els.exportJson.addEventListener('click', ()=>{
+      // ดึงค่าจากฟอร์มแบรนดิ้งเข้า state
+      state.data.branding = state.data.branding || {};
+      state.data.branding.title = els.brandInput.value || state.data.branding.title;
+      state.data.branding.accent = els.accentInput.value || state.data.branding.accent;
+      state.data.branding.logo = els.logoInput.value || state.data.branding.logo;
+      state.data.branding.cover = els.coverInput.value || state.data.branding.cover;
+
+      const blob = new Blob([JSON.stringify(state.data, null, 2)], {type: 'application/json'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = 'sounds.json'; a.click(); URL.revokeObjectURL(a.href);
+    });
+
+    els.addCat.addEventListener('click', ()=>{
+      const id = els.newCatId.value.trim();
+      const name = els.newCatName.value.trim() || id;
+      if(!id){ alert('กรอก id หมวดก่อน'); return; }
+      if(state.data.categories.find(c=>c.id===id)){ alert('มี id นี้แล้ว'); return; }
+      state.data.categories.push({id, name, sounds: []});
+      els.newCatId.value = ''; els.newCatName.value = '';
+      renderAll();
+    });
+
+    els.addSound.addEventListener('click', ()=>{
+      const catId = state.category==='all' ? (state.data.categories[0]?.id) : state.category;
+      if(!catId){ alert('ยังไม่มีหมวด เลือกหรือสร้างหมวดก่อน'); return; }
+      const cat = state.data.categories.find(c=>c.id===catId) || state.data.categories[0];
+      const item = {
+        name: els.soundName.value.trim() || 'Untitled',
+        file: els.soundFile.value.trim(),
+        hotkey: els.soundHotkey.value.trim() || undefined,
+        color: els.soundColor.value,
+        image: els.soundImage.value.trim() || undefined,
+      };
+      if(!item.file){ alert('ใส่พาธไฟล์/URL ก่อน'); return; }
+      cat.sounds.push(item);
+      els.soundName.value = ''; els.soundFile.value = ''; els.soundHotkey.value=''; els.soundImage.value='';
+      renderAll();
+    });
+
+    els.importJson.addEventListener('change', async (e)=>{
+      const f = e.target.files?.[0]; if(!f) return;
+      const txt = await f.text();
+      try{ state.data = JSON.parse(txt); }catch{ alert('ไฟล์ไม่ใช่ JSON ที่ถูกต้อง'); return; }
+      renderAll();
+    });
+
+    // ====== อีเวนต์ทั่วไป ======
+    els.search.addEventListener('input', (e)=>{ state.search = e.target.value; setHash(); renderGrid(); });
+    els.select.addEventListener('change', (e)=>{ state.category = e.target.value; setHash(); renderAll(); });
+    els.volume.addEventListener('input', (e)=>{ state.volume = +e.target.value; for(const a of state.active) a.volume = state.volume; });
+    els.speed.addEventListener('input', (e)=>{ state.speed = +e.target.value; for(const a of state.active) a.playbackRate = state.speed; });
+    els.stopAll.addEventListener('click', stopAll);
+    els.share.addEventListener('click', ()=>{ setHash(); navigator.clipboard.writeText(location.href).then(()=> alert('คัดลอกลิงก์แล้ว')); });
+
+    window.addEventListener('keydown', (e)=>{
+      if(e.code === 'Space'){ e.preventDefault(); stopAll(); return; }
+      // 1–9 ทางลัดเล่นไอเท็มลำดับที่ n
+      const idx = parseInt(e.key,10);
+      if(idx>=1 && idx<=9){
+        const items = els.grid.querySelectorAll('.card .pad');
+        const btn = items[idx-1];
+        if(btn){ btn.click(); }
+      }
+      if(e.key==='e' && (e.ctrlKey || e.metaKey)){ openEditor(); }
+    });
+
+    // ====== Wake Lock (ไม่ให้จอดับ) ======
+    let wakeLockObj = null;
+    async function updateWakeLock(){
+      if(els.wakelock && els.wakelock.checked && 'wakeLock' in navigator){
+        try{ wakeLockObj = await navigator.wakeLock.request('screen'); }
+        catch(e){ console.warn('WakeLock error', e); alert('อุปกรณ์/เบราว์เซอร์นี้ไม่รองรับ Wake Lock'); els.wakelock.checked=false; }
+      }else{
+        if(wakeLockObj){ try{ await wakeLockObj.release(); }catch{} wakeLockObj = null; }
+      }
+    }
+    document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='visible' && els.wakelock?.checked) updateWakeLock(); });
+    if(els.wakelock) els.wakelock.addEventListener('change', updateWakeLock);
+
+    $1
+    (async function init(){
+      readHash();
+      state.data = await loadData();
+      renderAll();
+    })();
+  </script>
+</body>
+</html>
