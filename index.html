@@ -379,7 +379,7 @@
         const item = h('div', {class:'card', role:'listitem'},[
           pad,
           h('h3', {}, s.name || 'ไม่มีชื่อ'),
-          $1
+          
           (s.note ? h('div', {class:'meta'}, s.note) : null),
           h('div', {}, [shareBtn])
         ]);
@@ -506,7 +506,7 @@
     document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='visible' && els.wakelock?.checked) updateWakeLock(); });
     if(els.wakelock) els.wakelock.addEventListener('change', updateWakeLock);
 
-    $1
+    
     (async function init(){
       readHash();
       state.data = await loadData();
