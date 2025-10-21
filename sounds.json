@@ -17,6 +17,48 @@
           "color": "red"
         }
       ]
+    },
+    {
+      "id": "kkm17",
+      "name": "kkm17",
+      "sounds": [
+        {
+          "name": "ซ่งจิ่น",
+          "file": "audio/kkm17/ซ่งจิ่น.mp3",
+          "hotkey": "1",
+          "color": "blue"
+        },
+        {
+          "name": "ลั่วหมี่",
+          "file": "audio/kkm17/ลั่วหมี่.mp3",
+          "hotkey": "2",
+          "color": "pink"
+        },
+        {
+          "name": "หมี่หลาน",
+          "file": "audio/kkm17/หมี่หลาน.mp3",
+          "hotkey": "3",
+          "color": "pink"
+        },
+        {
+          "name": "หยุนเสี่ยง",
+          "file": "audio/kkm17/หยุนเสี่ยง.mp3",
+          "hotkey": "4",
+          "color": "pink"
+        },
+        {
+          "name": "เสี่ยวเช่อ",
+          "file": "audio/kkm17/เสี่ยวเช่อ.mp3",
+          "hotkey": "5",
+          "color": "blue"
+        },
+        {
+          "name": "เหล่าเซียม",
+          "file": "audio/kkm17/เหล่าเซียม.mp3",
+          "hotkey": "6",
+          "color": "blue"
+        }
+      ]
     }
   ]
 }
