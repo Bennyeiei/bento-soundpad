@@ -2,16 +2,19 @@
 
 ## Routes
 
-- [ ] `/` shows `ทั้งหมด`, KKT10, and legacy IDs without a console error.
+- [ ] `/` shows `ทั้งหมด`, KKT10, KKT12, and legacy IDs without a console error.
 - [ ] `/?job=kkt10` shows KKT10 and the header link points to `?job=kkt10`.
+- [ ] `/?job=kkt12` shows 49 glossary-derived cards and the header link points to `?job=kkt12`.
+- [ ] `/?job=kkt12&q=谢明兰` finds `เซี่ยหมิงหลาน` through its Chinese alias.
 - [ ] `/?job=kkt10&q=ฉิน` filters label/pronunciation/alias.
 - [ ] `/?job=unknown` shows a readable missing-job state and does not throw.
 - [ ] `/?cat=kkm17` keeps the old job code and plays the existing file path.
 
 ## Interaction
 
-- [ ] Click each visible pad; KKT10 uses Thai TTS and legacy items use FILE.
-- [ ] A broken file path falls back to TTS without an alert or uncaught error.
+- [ ] Click a KKT10 or KKT12 pad; generated MP3 should show FILE and play without relying on browser voices.
+- [ ] Click a legacy pad; existing FILE audio remains usable.
+- [ ] A broken file path falls back to TTS only when the browser has an actual speech voice, otherwise it reports the missing voice.
 - [ ] `Space` stops playback; `1`–`9` play the visible cards.
 - [ ] Volume and speed controls update active playback.
 - [ ] Share button copies the current job-code link without the search query.

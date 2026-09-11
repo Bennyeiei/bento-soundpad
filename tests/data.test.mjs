@@ -7,14 +7,25 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (file) => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 
-test('current catalog contains the KKT10 job seed', () => {
+test('current catalog contains the KKT10 job seed with generated audio', () => {
   const catalog = read('data/jobs.json');
   const job = catalog.jobs.find((item) => item.id === 'KKT10');
   assert.ok(job);
   assert.equal(job.slug, 'kkt10');
   assert.equal(job.status, 'active');
   assert.ok(job.sounds.length >= 18);
-  assert.ok(job.sounds.every((sound) => sound.type === 'tts'));
+  assert.ok(job.sounds.every((sound) => sound.type === 'file' && sound.file?.startsWith('audio/kkt10/')));
+});
+
+test('current catalog contains the KKT12 glossary job', () => {
+  const catalog = read('data/jobs.json');
+  const job = catalog.jobs.find((item) => item.id === 'KKT12');
+  assert.ok(job);
+  assert.equal(job.slug, 'kkt12');
+  assert.equal(job.source, 'Chinese-Thai Drama Glossary · KKT12_01');
+  assert.equal(job.sounds.length, 49);
+  assert.ok(job.sounds.some((sound) => sound.aliases.includes('谢明兰')));
+  assert.ok(job.sounds.every((sound) => sound.type === 'file' && sound.file?.startsWith('audio/kkt12/')));
 });
 
 test('legacy catalog preserves both original IDs and audio paths', () => {

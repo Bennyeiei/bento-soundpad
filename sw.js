@@ -1,5 +1,5 @@
 // KKT Voice Guide service worker
-const CACHE_NAME = 'kkt-voice-guide-v2';
+const CACHE_NAME = 'kkt-voice-guide-v3';
 const CORE_ASSETS = [
   './',
   './manifest.webmanifest',

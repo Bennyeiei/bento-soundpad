@@ -12,6 +12,30 @@ export function scaledTtsRate(item, speed = 1) {
   return Math.min(10, Math.max(0.1, base * multiplier));
 }
 
+export function hasSpeechVoice(synth = globalThis.speechSynthesis) {
+  try {
+    return Boolean(synth && typeof synth.getVoices === 'function' && synth.getVoices().length);
+  } catch {
+    return false;
+  }
+}
+
+function pickSpeechVoice(synth, lang) {
+  if (!synth || typeof synth.getVoices !== 'function') return null;
+  try {
+    const voices = synth.getVoices();
+    const normalized = String(lang || '').toLowerCase();
+    const language = normalized.split('-')[0];
+    return voices.find((voice) => String(voice.lang || '').toLowerCase() === normalized)
+      || voices.find((voice) => String(voice.lang || '').toLowerCase().startsWith(`${language}-`))
+      || voices.find((voice) => voice.default)
+      || voices[0]
+      || null;
+  } catch {
+    return null;
+  }
+}
+
 function clampVolume(value) {
   const numeric = Number(value);
   return Number.isFinite(numeric) ? Math.min(1, Math.max(0, numeric)) : 1;
@@ -74,10 +98,18 @@ export function createAudioController({
       }
       return Promise.resolve({ ok: false, mode: 'tts-unavailable' });
     }
+    if (!hasSpeechVoice(synth)) {
+      if (token === generation) {
+        onNotice('ไม่พบเสียง TTS ในเบราว์เซอร์นี้ จึงไม่มีเสียงให้อ่าน');
+        finish(token);
+      }
+      return Promise.resolve({ ok: false, mode: 'tts-no-voice' });
+    }
 
     try {
       const utterance = new Utterance(text);
       utterance.lang = item?.tts?.lang || 'th-TH';
+      utterance.voice = pickSpeechVoice(synth, utterance.lang);
       utterance.rate = scaledTtsRate(item, getSpeed());
       utterance.volume = clampVolume(getVolume());
       utterance.onend = () => finish(token);
@@ -91,7 +123,7 @@ export function createAudioController({
         current.utterance = utterance;
       }
       synth.speak(utterance);
-      return Promise.resolve({ ok: true, mode: 'tts' });
+      return Promise.resolve({ ok: true, mode: 'tts', voice: utterance.voice?.name || null });
     } catch (error) {
       if (token === generation) {
         onNotice('เกิดข้อผิดพลาดขณะเริ่ม TTS');
