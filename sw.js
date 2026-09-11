@@ -1,57 +1,63 @@
-// sw.js
-const CACHE_NAME = 'bubble-voice-v5';  // เปลี่ยนชื่อทุกครั้งที่แก้ SW
+// KKT Voice Guide service worker
+const CACHE_NAME = 'kkt-voice-guide-v2';
 const CORE_ASSETS = [
   './',
-  './manifest.webmanifest'
-  // ไม่แคช './index.html' เพื่อลดโอกาสค้างหน้าเก่า
+  './manifest.webmanifest',
+  './data/jobs.json',
+  './data/legacy-jobs.json',
+  './src/styles/tokens.css',
+  './src/styles/layout.css',
+  './src/styles/components.css',
+  './src/app.js',
+  './src/audio.js',
+  './src/data.js',
+  './src/render.js',
+  './src/router.js',
 ];
 
-// ติดตั้ง
-self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(CORE_ASSETS)));
+self.addEventListener('install', (event) => {
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS)));
   self.skipWaiting();
 });
 
-// เปิดใช้งาน
-self.addEventListener('activate', (e) => {
-  e.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
-    )
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => Promise.all(
+      keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)),
+    )),
   );
   self.clients.claim();
 });
 
-// จัดนโยบายแคช
-self.addEventListener('fetch', (e) => {
-  const url = new URL(e.request.url);
-
-  // 1) เสียง: ไม่แคช ปล่อยโหลดสด
+self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+  if (!['GET', 'HEAD'].includes(event.request.method)) return;
   if (/\.(mp3|m4a|wav|ogg)$/i.test(url.pathname)) return;
 
-  // 2) sounds.json: network-first (สดก่อน ถ้าออฟไลน์ค่อยใช้แคช)
-  if (url.pathname.endsWith('/sounds.json')) {
-    e.respondWith(
-      fetch(e.request, { cache: 'no-store' }).then(res => {
-        const copy = res.clone();
-        caches.open(CACHE_NAME).then(c => c.put(e.request, copy));
-        return res;
-      }).catch(() => caches.match(e.request))
+  const isCatalog = url.pathname.endsWith('/data/jobs.json') || url.pathname.endsWith('/data/legacy-jobs.json');
+  if (isCatalog) {
+    event.respondWith(
+      fetch(event.request, { cache: 'no-store' }).then((response) => {
+        const copy = response.clone();
+        void caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+        return response;
+      }).catch(() => caches.match(event.request)),
     );
     return;
   }
 
-  // 3) อื่น ๆ : cache-first + ใส่แคชภายหลัง (stale-while-revalidate แบบง่าย)
-  e.respondWith(
-    caches.match(e.request).then(res => {
-      const fetchPromise = fetch(e.request).then(netRes => {
-        if (e.request.method === 'GET' && netRes.ok && netRes.type === 'basic') {
-          const copy = netRes.clone();
-          caches.open(CACHE_NAME).then(c => c.put(e.request, copy));
+  event.respondWith(
+    caches.match(event.request).then((cached) => {
+      const fresh = fetch(event.request).then((response) => {
+        if (response.ok && response.type === 'basic') {
+          const copy = response.clone();
+          void caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
         }
-        return netRes;
-      });
-      return res || fetchPromise;
-    })
+        return response;
+      }).catch(() => event.request.mode === 'navigate'
+        ? caches.match('./')
+        : Response.error());
+      return cached || fresh;
+    }),
   );
 });

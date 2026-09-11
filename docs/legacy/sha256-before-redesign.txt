@@ -1,0 +1,7 @@
+# Pre-change legacy snapshot SHA-256 manifest
+# Baseline commit: b423263a19f090b7b77d1d1d077b84dfad154512
+# Created: 2026-09-11T08:45:23Z
+3469a910f97dae340f438b2f0decf3d4e9895c5db53867d053b2a36e6e4a8440  index.html
+cc08b165fc8f56134299be97ea9d810d63547d7282059053307cca0b8f27d66e  sounds.json
+1a87bc38f9beba5609e5b7f5e9e0fcdd3b8bef96ec50ead05e93e9c462c2b3ad  sw.js
+2bf4697e0b49fc033a861a41a822369caeba8143eaa47e1bf937046f147e9552  manifest.webmanifest

@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "kkm15",
+      "slug": "kkm15",
+      "title": "kkm15",
+      "status": "legacy",
+      "kind": "legacy",
+      "legacyQuery": {
+        "param": "cat",
+        "value": "kkm15"
+      },
+      "source": "sounds.json (legacy)",
+      "sounds": [
+        {
+          "id": "kkm15-sound-001",
+          "label": "เสี่ยวขุ่ย",
+          "pronunciation": "เสี่ยวขุ่ย",
+          "aliases": [
+            "เสี่ยวขุ่ย"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkm15/เสี่ยวขุ่ย.mp3",
+          "hotkey": "1",
+          "color": "red",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kkm17",
+      "slug": "kkm17",
+      "title": "kkm17",
+      "status": "legacy",
+      "kind": "legacy",
+      "legacyQuery": {
+        "param": "cat",
+        "value": "kkm17"
+      },
+      "source": "sounds.json (legacy)",
+      "sounds": [
+        {
+          "id": "kkm17-sound-001",
+          "label": "ซ่งจิ่น",
+          "pronunciation": "ซ่งจิ่น",
+          "aliases": [
+            "ซ่งจิ่น"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkm17/ซ่งจิ่น.mp3",
+          "hotkey": "1",
+          "color": "blue",
+          "note": ""
+        },
+        {
+          "id": "kkm17-sound-002",
+          "label": "ลั่วหมี่",
+          "pronunciation": "ลั่วหมี่",
+          "aliases": [
+            "ลั่วหมี่"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkm17/ลั่วหมี่.mp3",
+          "hotkey": "2",
+          "color": "pink",
+          "note": ""
+        },
+        {
+          "id": "kkm17-sound-003",
+          "label": "หมี่หลาน",
+          "pronunciation": "หมี่หลาน",
+          "aliases": [
+            "หมี่หลาน"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkm17/หมี่หลาน.mp3",
+          "hotkey": "3",
+          "color": "pink",
+          "note": ""
+        },
+        {
+          "id": "kkm17-sound-004",
+          "label": "หยุนเสี่ยง",
+          "pronunciation": "หยุนเสี่ยง",
+          "aliases": [
+            "หยุนเสี่ยง"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkm17/หยุนเสี่ยง.mp3",
+          "hotkey": "4",
+          "color": "pink",
+          "note": ""
+        },
+        {
+          "id": "kkm17-sound-005",
+          "label": "เสี่ยวเช่อ",
+          "pronunciation": "เสี่ยวเช่อ",
+          "aliases": [
+            "เสี่ยวเช่อ"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkm17/เสี่ยวเช่อ.mp3",
+          "hotkey": "5",
+          "color": "blue",
+          "note": ""
+        },
+        {
+          "id": "kkm17-sound-006",
+          "label": "เหล่าเซียม",
+          "pronunciation": "เหล่าเซียม",
+          "aliases": [
+            "เหล่าเซียม"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkm17/เหล่าเซียม.mp3",
+          "hotkey": "6",
+          "color": "blue",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

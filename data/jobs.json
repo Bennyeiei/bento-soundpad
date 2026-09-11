@@ -1,0 +1,839 @@
+{
+  "version": 2,
+  "branding": {
+    "title": "KKT Voice Guide",
+    "shortTitle": "KKT Voice Guide",
+    "logo": "logo.png",
+    "theme": "midnight-gold-vault"
+  },
+  "jobs": [
+    {
+      "id": "KKT10",
+      "slug": "kkt10",
+      "title": "บทพากย์ / ไกด์เสียง",
+      "status": "active",
+      "source": "KKT10 — บทพากย์ / คอลัมน์ไกด์เสียง",
+      "sounds": [
+        {
+          "id": "kkt10-guide-001",
+          "label": "คุณย่า ฉิน",
+          "pronunciation": "คุณย่า ฉิน",
+          "aliases": [
+            "คุณย่า ฉิน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-002",
+          "label": "ฉิน อวี่ ชวน",
+          "pronunciation": "ฉิน อวี่ ชวน",
+          "aliases": [
+            "ฉิน อวี่ ชวน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-003",
+          "label": "ฉิน หร่าน",
+          "pronunciation": "ฉิน หร่าน",
+          "aliases": [
+            "ฉิน หร่าน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-004",
+          "label": "ฉิน อวี่ ชวน + จี้ สือ",
+          "pronunciation": "ฉิน อวี่ ชวน, จี้ สือ",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "จี้ สือ"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-005",
+          "label": "ฉิน หร่าน + คุณย่า ฉิน",
+          "pronunciation": "ฉิน หร่าน, คุณย่า ฉิน",
+          "aliases": [
+            "ฉิน หร่าน",
+            "คุณย่า ฉิน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-006",
+          "label": "ฉิน เจิ้ง ฮว๋า + เจิ้ง ฮว๋า",
+          "pronunciation": "ฉิน เจิ้ง ฮว๋า, เจิ้ง ฮว๋า",
+          "aliases": [
+            "ฉิน เจิ้ง ฮว๋า",
+            "เจิ้ง ฮว๋า"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-007",
+          "label": "ฉิน อวี่ ชวน + ฉิน หร่าน",
+          "pronunciation": "ฉิน อวี่ ชวน, ฉิน หร่าน",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "ฉิน หร่าน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-008",
+          "label": "ฉิน หร่าน + เซี่ย ชิง ชิง",
+          "pronunciation": "ฉิน หร่าน, เซี่ย ชิง ชิง",
+          "aliases": [
+            "ฉิน หร่าน",
+            "เซี่ย ชิง ชิง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-009",
+          "label": "เซี่ย ชิง ชิง",
+          "pronunciation": "เซี่ย ชิง ชิง",
+          "aliases": [
+            "เซี่ย ชิง ชิง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-010",
+          "label": "จี้ สือ",
+          "pronunciation": "จี้ สือ",
+          "aliases": [
+            "จี้ สือ"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-011",
+          "label": "ฉิน อวี่ ชวน + เซี่ย ชิง ชิง",
+          "pronunciation": "ฉิน อวี่ ชวน, เซี่ย ชิง ชิง",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "เซี่ย ชิง ชิง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-012",
+          "label": "ฉิน อวี่ ชวน + คุณย่า ฉิน",
+          "pronunciation": "ฉิน อวี่ ชวน, คุณย่า ฉิน",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "คุณย่า ฉิน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-013",
+          "label": "ฉิน เจิ้ง ฮว๋า + เจิ้ง ฮว๋า + ฉิน หร่าน",
+          "pronunciation": "ฉิน เจิ้ง ฮว๋า, เจิ้ง ฮว๋า, ฉิน หร่าน",
+          "aliases": [
+            "ฉิน เจิ้ง ฮว๋า",
+            "เจิ้ง ฮว๋า",
+            "ฉิน หร่าน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-014",
+          "label": "หมอ จาง",
+          "pronunciation": "หมอ จาง",
+          "aliases": [
+            "หมอ จาง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-015",
+          "label": "หมอ จาง + ฉิน หร่าน",
+          "pronunciation": "หมอ จาง, ฉิน หร่าน",
+          "aliases": [
+            "หมอ จาง",
+            "ฉิน หร่าน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-016",
+          "label": "หมอ จาง + จี้ สือ",
+          "pronunciation": "หมอ จาง, จี้ สือ",
+          "aliases": [
+            "หมอ จาง",
+            "จี้ สือ"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-017",
+          "label": "ฉิน หร่าน + น้า เมิ่ง",
+          "pronunciation": "ฉิน หร่าน, น้า เมิ่ง",
+          "aliases": [
+            "ฉิน หร่าน",
+            "น้า เมิ่ง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-018",
+          "label": "น้า เมิ่ง",
+          "pronunciation": "น้า เมิ่ง",
+          "aliases": [
+            "น้า เมิ่ง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-019",
+          "label": "เฉียว เยว่",
+          "pronunciation": "เฉียว เยว่",
+          "aliases": [
+            "เฉียว เยว่"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-020",
+          "label": "ฉิน หร่าน + เฉียว เยว่",
+          "pronunciation": "ฉิน หร่าน, เฉียว เยว่",
+          "aliases": [
+            "ฉิน หร่าน",
+            "เฉียว เยว่"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-021",
+          "label": "กู้ เฉิง",
+          "pronunciation": "กู้ เฉิง",
+          "aliases": [
+            "กู้ เฉิง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-022",
+          "label": "ฉิน อวี่ ชวน + น้า เมิ่ง",
+          "pronunciation": "ฉิน อวี่ ชวน, น้า เมิ่ง",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "น้า เมิ่ง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-023",
+          "label": "กู้ เฉิง + ฉิน หร่าน",
+          "pronunciation": "กู้ เฉิง, ฉิน หร่าน",
+          "aliases": [
+            "กู้ เฉิง",
+            "ฉิน หร่าน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-024",
+          "label": "กู้ เฉิง + เฉียว เยว่",
+          "pronunciation": "กู้ เฉิง, เฉียว เยว่",
+          "aliases": [
+            "กู้ เฉิง",
+            "เฉียว เยว่"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-025",
+          "label": "คุณย่า ฉิน + เฉียว เยว่",
+          "pronunciation": "คุณย่า ฉิน, เฉียว เยว่",
+          "aliases": [
+            "คุณย่า ฉิน",
+            "เฉียว เยว่"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-026",
+          "label": "โจว เมี่ยว",
+          "pronunciation": "โจว เมี่ยว",
+          "aliases": [
+            "โจว เมี่ยว"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-027",
+          "label": "ฉิน ชิง",
+          "pronunciation": "ฉิน ชิง",
+          "aliases": [
+            "ฉิน ชิง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-028",
+          "label": "ฉิน หร่าน + โจว เมี่ยว",
+          "pronunciation": "ฉิน หร่าน, โจว เมี่ยว",
+          "aliases": [
+            "ฉิน หร่าน",
+            "โจว เมี่ยว"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-029",
+          "label": "ฉิน อวี่ ชวน + โจว เมี่ยว",
+          "pronunciation": "ฉิน อวี่ ชวน, โจว เมี่ยว",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "โจว เมี่ยว"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-030",
+          "label": "ฟู่ เจ๋อ",
+          "pronunciation": "ฟู่ เจ๋อ",
+          "aliases": [
+            "ฟู่ เจ๋อ"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-031",
+          "label": "ฟู่ เจ๋อ + ฉิน หร่าน",
+          "pronunciation": "ฟู่ เจ๋อ, ฉิน หร่าน",
+          "aliases": [
+            "ฟู่ เจ๋อ",
+            "ฉิน หร่าน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-032",
+          "label": "ฟู่ เจ๋อ + คุณย่า ฉิน",
+          "pronunciation": "ฟู่ เจ๋อ, คุณย่า ฉิน",
+          "aliases": [
+            "ฟู่ เจ๋อ",
+            "คุณย่า ฉิน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-033",
+          "label": "ฟู่ เฉิง",
+          "pronunciation": "ฟู่ เฉิง",
+          "aliases": [
+            "ฟู่ เฉิง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-034",
+          "label": "ฉิน อวี่ ชวน + ฟู่ เฉิง",
+          "pronunciation": "ฉิน อวี่ ชวน, ฟู่ เฉิง",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "ฟู่ เฉิง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-035",
+          "label": "หลี่ ชุ่ย หง",
+          "pronunciation": "หลี่ ชุ่ย หง",
+          "aliases": [
+            "หลี่ ชุ่ย หง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-036",
+          "label": "ฟู่ เฉิง + ฉิน เจิ้ง ฮว๋า + เจิ้ง ฮว๋า",
+          "pronunciation": "ฟู่ เฉิง, ฉิน เจิ้ง ฮว๋า, เจิ้ง ฮว๋า",
+          "aliases": [
+            "ฟู่ เฉิง",
+            "ฉิน เจิ้ง ฮว๋า",
+            "เจิ้ง ฮว๋า"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-037",
+          "label": "โจว เฉียง + หลี่ ชุ่ย หง",
+          "pronunciation": "โจว เฉียง, หลี่ ชุ่ย หง",
+          "aliases": [
+            "โจว เฉียง",
+            "หลี่ ชุ่ย หง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-038",
+          "label": "โจว เฉียง",
+          "pronunciation": "โจว เฉียง",
+          "aliases": [
+            "โจว เฉียง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-039",
+          "label": "หลี่ กั๋ว ชิ่ง",
+          "pronunciation": "หลี่ กั๋ว ชิ่ง",
+          "aliases": [
+            "หลี่ กั๋ว ชิ่ง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-040",
+          "label": "ฉิน อวี่ ชวน + ฟู่ เจ๋อ",
+          "pronunciation": "ฉิน อวี่ ชวน, ฟู่ เจ๋อ",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "ฟู่ เจ๋อ"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-041",
+          "label": "ฉิน อวี่ ชวน + ฟู่ เจ๋อ + ฉิน หร่าน",
+          "pronunciation": "ฉิน อวี่ ชวน, ฟู่ เจ๋อ, ฉิน หร่าน",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "ฟู่ เจ๋อ",
+            "ฉิน หร่าน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-042",
+          "label": "ฉิน หร่าน + หลี่ ชุ่ย หง",
+          "pronunciation": "ฉิน หร่าน, หลี่ ชุ่ย หง",
+          "aliases": [
+            "ฉิน หร่าน",
+            "หลี่ ชุ่ย หง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-043",
+          "label": "หลี่ กั๋ว ชิ่ง + หลี่ ชุ่ย หง",
+          "pronunciation": "หลี่ กั๋ว ชิ่ง, หลี่ ชุ่ย หง",
+          "aliases": [
+            "หลี่ กั๋ว ชิ่ง",
+            "หลี่ ชุ่ย หง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-044",
+          "label": "โจว เฉียง + ฉิน หร่าน + หลี่ ชุ่ย หง",
+          "pronunciation": "โจว เฉียง, ฉิน หร่าน, หลี่ ชุ่ย หง",
+          "aliases": [
+            "โจว เฉียง",
+            "ฉิน หร่าน",
+            "หลี่ ชุ่ย หง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-045",
+          "label": "จี้ สือ + ฟู่ เจ๋อ",
+          "pronunciation": "จี้ สือ, ฟู่ เจ๋อ",
+          "aliases": [
+            "จี้ สือ",
+            "ฟู่ เจ๋อ"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-046",
+          "label": "โจว เฉียง + ฉิน หร่าน",
+          "pronunciation": "โจว เฉียง, ฉิน หร่าน",
+          "aliases": [
+            "โจว เฉียง",
+            "ฉิน หร่าน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-047",
+          "label": "ฉิน อวี่ ชวน + โจว เฉียง",
+          "pronunciation": "ฉิน อวี่ ชวน, โจว เฉียง",
+          "aliases": [
+            "ฉิน อวี่ ชวน",
+            "โจว เฉียง"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-048",
+          "label": "เจิ้ง ฮว๋า",
+          "pronunciation": "เจิ้ง ฮว๋า",
+          "aliases": [
+            "เจิ้ง ฮว๋า"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-049",
+          "label": "ฟู่ เฉิง + เจิ้ง ฮว๋า",
+          "pronunciation": "ฟู่ เฉิง, เจิ้ง ฮว๋า",
+          "aliases": [
+            "ฟู่ เฉิง",
+            "เจิ้ง ฮว๋า"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-050",
+          "label": "ฟู่ เฉิง + ฟู่ เจ๋อ",
+          "pronunciation": "ฟู่ เฉิง, ฟู่ เจ๋อ",
+          "aliases": [
+            "ฟู่ เฉิง",
+            "ฟู่ เจ๋อ"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-051",
+          "label": "ฟู่ เฉิง + จี้ สือ",
+          "pronunciation": "ฟู่ เฉิง, จี้ สือ",
+          "aliases": [
+            "ฟู่ เฉิง",
+            "จี้ สือ"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        },
+        {
+          "id": "kkt10-guide-052",
+          "label": "ฟู่ เฉิง + ฉิน หร่าน",
+          "pronunciation": "ฟู่ เฉิง, ฉิน หร่าน",
+          "aliases": [
+            "ฟู่ เฉิง",
+            "ฉิน หร่าน"
+          ],
+          "type": "tts",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": null,
+          "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
+        }
+      ]
+    }
+  ]
+}
