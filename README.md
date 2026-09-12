@@ -6,6 +6,7 @@ Static, single-page voice guide derived from the original Bubble Voice layout.
 
 - All jobs: `https://bennyeiei.github.io/bento-soundpad/`
 - A job by code: `https://bennyeiei.github.io/bento-soundpad/?job=kkt10`
+- KKT13 glossary job: `https://bennyeiei.github.io/bento-soundpad/?job=kkt13`
 - KKT12 glossary job: `https://bennyeiei.github.io/bento-soundpad/?job=kkt12`
 - Legacy compatibility: `https://bennyeiei.github.io/bento-soundpad/?cat=kkm17`
 
@@ -13,13 +14,28 @@ The sidebar keeps the original one-page behavior: selecting a job swaps the visi
 
 ## Current data
 
-- `data/jobs.json`: current job catalog; KKT10 comes from the confirmed `ไกด์เสียง` values in the public KKT10 sheet export, and KKT12 comes from the supplied `Chinese-Thai Drama Glossary · KKT12_01`.
+- `data/glossary.json`: central, append-only candidate glossary for clean Thai terms from KKT01-KKT13 SRT files. Exact spelling variants remain separate. The `reviewQueue` is collected for later confirmation but is not shown as a sound card.
+- `data/jobs.json`: current job catalog. Each job uses `glossaryRefs` to pull only its central terms. KKT10 retains its confirmed inline `ไกด์เสียง` cards; KKT12 retains its supplied `Chinese-Thai Drama Glossary · KKT12_01` cards and is not copied into the central file.
 - `data/kkt12-job.json`: source-shaped KKT12 glossary seed with 49 character, title, kinship, place, event, object, drug, and terminology entries.
 - `data/legacy-jobs.json`: read-only projection of the original `sounds.json` categories.
 - `sounds.json`: retained as the original compatibility source and snapshot evidence.
-- `data/schema.md`: field and URL contract.
+- `data/schema.md`: field, central-glossary, and URL contract.
 
-The current KKT10 and KKT12 catalogs use generated public MP3 files under `audio/`; browser TTS remains a fallback only when a file cannot play and the browser has an actual speech voice. The app reports when no speech voice exists instead of claiming silent TTS succeeded.
+Central glossary audio is stored once under `audio/glossary/` and is reused by every job that references the term. Job-specific audio remains under `audio/<job-slug>/`. Browser TTS remains a fallback only when a file cannot play and the browser has an actual speech voice. The app reports when no speech voice exists instead of claiming silent TTS succeeded.
+
+## Adding terms to the central glossary
+
+1. Add a clean entry to `data/glossary.json` with a stable `id`, exact Thai `label`, reviewed `pronunciation`, `sourceJobs`, and `occurrencesInSrt`.
+2. Keep exact spelling variants as separate entries; do not invent Chinese aliases. Do not put slash, brackets, parentheses, metadata, or generic titles in a sound entry.
+3. Add the entry ID to the relevant job's `glossaryRefs` in `data/jobs.json`. Do not copy the full sound object into the job.
+4. Put uncertain candidates in `reviewQueue` until the wording and role are confirmed.
+5. Rebuild central MP3s with the development helper, then run validation and tests.
+
+```bash
+python scripts/generate_tts_audio.py
+npm test
+npm run validate
+```
 
 ## Local verification
 
@@ -29,7 +45,7 @@ Serve the repository through HTTP (ES modules and service workers do not work re
 python -m http.server 4173
 ```
 
-Then open `http://127.0.0.1:4173/?job=kkt10` or `http://127.0.0.1:4173/?job=kkt12`. For another device on the same LAN, use the host's LAN address instead of `127.0.0.1`.
+Then open `http://127.0.0.1:4173/?job=kkt10`, `http://127.0.0.1:4173/?job=kkt12`, or `http://127.0.0.1:4173/?job=kkt13`. For another device on the same LAN, use the host's LAN address instead of `127.0.0.1`.
 
 Generated MP3 files can be rebuilt from the catalog with the development-only helper:
 

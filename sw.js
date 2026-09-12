@@ -1,10 +1,11 @@
 // KKT Voice Guide service worker
-const CACHE_NAME = 'kkt-voice-guide-v3';
+const CACHE_NAME = 'kkt-voice-guide-v4';
 const CORE_ASSETS = [
   './',
   './manifest.webmanifest',
   './data/jobs.json',
   './data/legacy-jobs.json',
+  './data/glossary.json',
   './src/styles/tokens.css',
   './src/styles/layout.css',
   './src/styles/components.css',
@@ -34,7 +35,9 @@ self.addEventListener('fetch', (event) => {
   if (!['GET', 'HEAD'].includes(event.request.method)) return;
   if (/\.(mp3|m4a|wav|ogg)$/i.test(url.pathname)) return;
 
-  const isCatalog = url.pathname.endsWith('/data/jobs.json') || url.pathname.endsWith('/data/legacy-jobs.json');
+  const isCatalog = url.pathname.endsWith('/data/jobs.json')
+    || url.pathname.endsWith('/data/legacy-jobs.json')
+    || url.pathname.endsWith('/data/glossary.json');
   if (isCatalog) {
     event.respondWith(
       fetch(event.request, { cache: 'no-store' }).then((response) => {

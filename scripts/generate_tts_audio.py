@@ -16,6 +16,7 @@ import edge_tts
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG_PATH = ROOT / "data" / "jobs.json"
+GLOSSARY_PATH = ROOT / "data" / "glossary.json"
 VOICE = "th-TH-PremwadeeNeural"
 
 
@@ -34,6 +35,7 @@ async def generate_one(sound: dict, output: Path, *, force: bool) -> str:
 
 async def main(force: bool) -> None:
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+    glossary = json.loads(GLOSSARY_PATH.read_text(encoding="utf-8"))
     generated = 0
     kept = 0
     for job in catalog.get("jobs", []):
@@ -48,8 +50,18 @@ async def main(force: bool) -> None:
                 kept += 1
             sound["file"] = relative.as_posix()
             sound["type"] = "file"
+    for term in glossary.get("terms", []):
+        relative = Path("audio") / "glossary" / f"{term['id']}.mp3"
+        result = await generate_one(term, ROOT / relative, force=force)
+        if result == "generated":
+            generated += 1
+        else:
+            kept += 1
+        term["file"] = relative.as_posix()
+        term["type"] = "file"
     CATALOG_PATH.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"audio generation passed: generated={generated}, kept={kept}, voice={VOICE}")
+    GLOSSARY_PATH.write_text(json.dumps(glossary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"audio generation passed: generated={generated}, kept={kept}, glossary_terms={len(glossary.get('terms', []))}, voice={VOICE}")
 
 
 if __name__ == "__main__":

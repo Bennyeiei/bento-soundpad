@@ -1,0 +1,2336 @@
+{
+  "version": 1,
+  "scope": "คลังคำกลางจากข้อความไทยใน SRT ต้นฉบับ KKT01-KKT13; ไม่ใช้ OCR/CSV",
+  "policy": {
+    "keep_spelling_variants_separate": true,
+    "deduplicate_exact_terms_across_jobs": true,
+    "exclude_slash_parentheses_and_metadata": true,
+    "do_not_invent_chinese_alias": true,
+    "kkt12_policy": "ใช้ data/jobs.json glossary เดิมเป็นแหล่งของ KKT12; ไม่คัดลอกซ้ำเข้าคลังนี้"
+  },
+  "terms": [
+    {
+      "id": "glossary-name-7011ede613a7",
+      "label": "เจียงเจี้ยนเยว่",
+      "pronunciation": "เจียงเจี้ยนเยว่",
+      "aliases": [
+        "เจียงเจี้ยนเยว่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-7011ede613a7.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT01"
+      ],
+      "occurrencesInSrt": {
+        "KKT01": 17
+      },
+      "note": "SRT KKT01 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-6dca51518145",
+      "label": "ฉีหล่าง",
+      "pronunciation": "ฉีหล่าง",
+      "aliases": [
+        "ฉีหล่าง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-6dca51518145.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT01"
+      ],
+      "occurrencesInSrt": {
+        "KKT01": 34
+      },
+      "note": "SRT KKT01 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-06e4e3c21bc2",
+      "label": "ลู่เฉินโจว",
+      "pronunciation": "ลู่เฉินโจว",
+      "aliases": [
+        "ลู่เฉินโจว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-06e4e3c21bc2.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT01"
+      ],
+      "occurrencesInSrt": {
+        "KKT01": 29
+      },
+      "note": "SRT KKT01 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-ac9dd9478455",
+      "label": "หลินโม่",
+      "pronunciation": "หลินโม่",
+      "aliases": [
+        "หลินโม่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-ac9dd9478455.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT01"
+      ],
+      "occurrencesInSrt": {
+        "KKT01": 32
+      },
+      "note": "SRT KKT01 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-6c28eb0f72d3",
+      "label": "หยวนเว่ยกั๋ว",
+      "pronunciation": "หยวนเว่ยกั๋ว",
+      "aliases": [
+        "หยวนเว่ยกั๋ว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-6c28eb0f72d3.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 1
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-d3c067686550",
+      "label": "หวังซินอี๋",
+      "pronunciation": "หวังซินอี๋",
+      "aliases": [
+        "หวังซินอี๋"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-d3c067686550.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 1
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-8beebafe19b6",
+      "label": "โจวเสี่ยวจ้วง",
+      "pronunciation": "โจวเสี่ยวจ้วง",
+      "aliases": [
+        "โจวเสี่ยวจ้วง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-8beebafe19b6.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 1
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-c0a88c246468",
+      "label": "จางซื่อไข่",
+      "pronunciation": "จางซื่อไข่",
+      "aliases": [
+        "จางซื่อไข่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-c0a88c246468.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 1
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-c46ab4a86c41",
+      "label": "ซุนจงเฉิง",
+      "pronunciation": "ซุนจงเฉิง",
+      "aliases": [
+        "ซุนจงเฉิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-c46ab4a86c41.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 1
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-bbd55ad6efcc",
+      "label": "หม่าเทียน",
+      "pronunciation": "หม่าเทียน",
+      "aliases": [
+        "หม่าเทียน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-bbd55ad6efcc.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 1
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-8048bc69d9d5",
+      "label": "หลี่ชุ่ยเฟิน",
+      "pronunciation": "หลี่ชุ่ยเฟิน",
+      "aliases": [
+        "หลี่ชุ่ยเฟิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-8048bc69d9d5.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 1
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-3e152ab1e0d2",
+      "label": "เหลียงซิน",
+      "pronunciation": "เหลียงซิน",
+      "aliases": [
+        "เหลียงซิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-3e152ab1e0d2.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 1
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-3115fd38a327",
+      "label": "โจวชิงซง",
+      "pronunciation": "โจวชิงซง",
+      "aliases": [
+        "โจวชิงซง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-3115fd38a327.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 1
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-e304d17dd141",
+      "label": "โจวฮ่าว",
+      "pronunciation": "โจวฮ่าว",
+      "aliases": [
+        "โจวฮ่าว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-e304d17dd141.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 13
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-fc7261d36661",
+      "label": "โจวเย่าจู่",
+      "pronunciation": "โจวเย่าจู่",
+      "aliases": [
+        "โจวเย่าจู่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-fc7261d36661.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT02"
+      ],
+      "occurrencesInSrt": {
+        "KKT02": 33
+      },
+      "note": "SRT KKT02 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-96f40bac224b",
+      "label": "เซิ่งหนานโจว",
+      "pronunciation": "เซิ่งหนานโจว",
+      "aliases": [
+        "เซิ่งหนานโจว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-96f40bac224b.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT03"
+      ],
+      "occurrencesInSrt": {
+        "KKT03": 55
+      },
+      "note": "SRT KKT03 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-b6633ac0e0e4",
+      "label": "เสิ่นจือเจี๋ย",
+      "pronunciation": "เสิ่นจือเจี๋ย",
+      "aliases": [
+        "เสิ่นจือเจี๋ย"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-b6633ac0e0e4.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT03"
+      ],
+      "occurrencesInSrt": {
+        "KKT03": 1
+      },
+      "note": "SRT KKT03 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-a05ad6181b9d",
+      "label": "เสิ่นสือเยี่ยน",
+      "pronunciation": "เสิ่นสือเยี่ยน",
+      "aliases": [
+        "เสิ่นสือเยี่ยน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-a05ad6181b9d.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT03"
+      ],
+      "occurrencesInSrt": {
+        "KKT03": 5
+      },
+      "note": "SRT KKT03 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-a1f891c250b1",
+      "label": "เสิ่นอวี้เฉิน",
+      "pronunciation": "เสิ่นอวี้เฉิน",
+      "aliases": [
+        "เสิ่นอวี้เฉิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-a1f891c250b1.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT03"
+      ],
+      "occurrencesInSrt": {
+        "KKT03": 1
+      },
+      "note": "SRT KKT03 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-3eec6b276de3",
+      "label": "หลิงเย่า",
+      "pronunciation": "หลิงเย่า",
+      "aliases": [
+        "หลิงเย่า"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-3eec6b276de3.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT03"
+      ],
+      "occurrencesInSrt": {
+        "KKT03": 3
+      },
+      "note": "SRT KKT03 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-55e71ce29b20",
+      "label": "เจียงหลินหลิน",
+      "pronunciation": "เจียงหลินหลิน",
+      "aliases": [
+        "เจียงหลินหลิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-55e71ce29b20.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT03"
+      ],
+      "occurrencesInSrt": {
+        "KKT03": 35
+      },
+      "note": "SRT KKT03 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-80d15756bc9a",
+      "label": "เจียงเจี้ยนกั๋ว",
+      "pronunciation": "เจียงเจี้ยนกั๋ว",
+      "aliases": [
+        "เจียงเจี้ยนกั๋ว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-80d15756bc9a.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT03"
+      ],
+      "occurrencesInSrt": {
+        "KKT03": 2
+      },
+      "note": "SRT KKT03 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-8454f10a103c",
+      "label": "เสิ่นจือหว่าน",
+      "pronunciation": "เสิ่นจือหว่าน",
+      "aliases": [
+        "เสิ่นจือหว่าน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-8454f10a103c.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT03"
+      ],
+      "occurrencesInSrt": {
+        "KKT03": 102
+      },
+      "note": "SRT KKT03 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-specific-term-0c4f5fc6ecc2",
+      "label": "ซิงเฉิน",
+      "pronunciation": "ซิงเฉิน",
+      "aliases": [
+        "ซิงเฉิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-specific-term-0c4f5fc6ecc2.mp3",
+      "kind": "specific-term",
+      "priority": 3,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT03"
+      ],
+      "occurrencesInSrt": {
+        "KKT03": 1
+      },
+      "note": "SRT KKT03 · ศัพท์เฉพาะจีน"
+    },
+    {
+      "id": "glossary-name-6b426da6d234",
+      "label": "ฟู่หนิงหย่วน",
+      "pronunciation": "ฟู่หนิงหย่วน",
+      "aliases": [
+        "ฟู่หนิงหย่วน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-6b426da6d234.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT04"
+      ],
+      "occurrencesInSrt": {
+        "KKT04": 6
+      },
+      "note": "SRT KKT04 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-766019d4c572",
+      "label": "ฟู่อวิ๋นฉี่",
+      "pronunciation": "ฟู่อวิ๋นฉี่",
+      "aliases": [
+        "ฟู่อวิ๋นฉี่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-766019d4c572.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT04"
+      ],
+      "occurrencesInSrt": {
+        "KKT04": 46
+      },
+      "note": "SRT KKT04 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-6d06177b5ac6",
+      "label": "ซ่งหย่าเหวิน",
+      "pronunciation": "ซ่งหย่าเหวิน",
+      "aliases": [
+        "ซ่งหย่าเหวิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-6d06177b5ac6.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT04"
+      ],
+      "occurrencesInSrt": {
+        "KKT04": 10
+      },
+      "note": "SRT KKT04 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-ad9a7ac90d0a",
+      "label": "เจียงเจ๋อ",
+      "pronunciation": "เจียงเจ๋อ",
+      "aliases": [
+        "เจียงเจ๋อ"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-ad9a7ac90d0a.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT04"
+      ],
+      "occurrencesInSrt": {
+        "KKT04": 4
+      },
+      "note": "SRT KKT04 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-acc89731b174",
+      "label": "เสิ่นซิงเหอ",
+      "pronunciation": "เสิ่นซิงเหอ",
+      "aliases": [
+        "เสิ่นซิงเหอ"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-acc89731b174.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT04"
+      ],
+      "occurrencesInSrt": {
+        "KKT04": 79
+      },
+      "note": "SRT KKT04 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-d401eb2ef07a",
+      "label": "จูเสวียนอู่",
+      "pronunciation": "จูเสวียนอู่",
+      "aliases": [
+        "จูเสวียนอู่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-d401eb2ef07a.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 10
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-8207b5e25f13",
+      "label": "ซือคงหยวน",
+      "pronunciation": "ซือคงหยวน",
+      "aliases": [
+        "ซือคงหยวน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-8207b5e25f13.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 4
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-158bf5aa7da5",
+      "label": "ลั่วฉิงเทียน",
+      "pronunciation": "ลั่วฉิงเทียน",
+      "aliases": [
+        "ลั่วฉิงเทียน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-158bf5aa7da5.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 27
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-71b8f67e509e",
+      "label": "ลั่วอวิ๋นฟาน",
+      "pronunciation": "ลั่วอวิ๋นฟาน",
+      "aliases": [
+        "ลั่วอวิ๋นฟาน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-71b8f67e509e.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 5
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-b51208d6ab3c",
+      "label": "ลั่วอวิ๋นฮุย",
+      "pronunciation": "ลั่วอวิ๋นฮุย",
+      "aliases": [
+        "ลั่วอวิ๋นฮุย"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-b51208d6ab3c.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 1
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-0ecf0c30c2de",
+      "label": "ลั่วอวิ๋นเฟิง",
+      "pronunciation": "ลั่วอวิ๋นเฟิง",
+      "aliases": [
+        "ลั่วอวิ๋นเฟิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-0ecf0c30c2de.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 2
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-bd9b21a67823",
+      "label": "ลั่วเจิ้นอู่",
+      "pronunciation": "ลั่วเจิ้นอู่",
+      "aliases": [
+        "ลั่วเจิ้นอู่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-bd9b21a67823.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 13
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-49663e91a3d4",
+      "label": "หลงเซียวอวิ๋น",
+      "pronunciation": "หลงเซียวอวิ๋น",
+      "aliases": [
+        "หลงเซียวอวิ๋น"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-49663e91a3d4.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 3
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-ea220ff09c5f",
+      "label": "เฉียนจ้าวจิ้น",
+      "pronunciation": "เฉียนจ้าวจิ้น",
+      "aliases": [
+        "เฉียนจ้าวจิ้น"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-ea220ff09c5f.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 4
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-e6ef4eac3b04",
+      "label": "เฉียนว่านก้วน",
+      "pronunciation": "เฉียนว่านก้วน",
+      "aliases": [
+        "เฉียนว่านก้วน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-e6ef4eac3b04.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 2
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-2960c15dd5aa",
+      "label": "ลั่วหลี",
+      "pronunciation": "ลั่วหลี",
+      "aliases": [
+        "ลั่วหลี"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-2960c15dd5aa.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 61
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-4b0769fadbd6",
+      "label": "ลั่วเยี่ยน",
+      "pronunciation": "ลั่วเยี่ยน",
+      "aliases": [
+        "ลั่วเยี่ยน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-4b0769fadbd6.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 7
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-d6254633719d",
+      "label": "ลั่วเสวี่ย",
+      "pronunciation": "ลั่วเสวี่ย",
+      "aliases": [
+        "ลั่วเสวี่ย"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-d6254633719d.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 4
+      },
+      "note": "SRT KKT05 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-specific-term-1b6def85e134",
+      "label": "หลงเซียง",
+      "pronunciation": "หลงเซียง",
+      "aliases": [
+        "หลงเซียง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-specific-term-1b6def85e134.mp3",
+      "kind": "specific-term",
+      "priority": 3,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 32
+      },
+      "note": "SRT KKT05 · ศัพท์เฉพาะจีน"
+    },
+    {
+      "id": "glossary-specific-term-076ac7c6b8e8",
+      "label": "เฟยเยียน",
+      "pronunciation": "เฟยเยียน",
+      "aliases": [
+        "เฟยเยียน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-specific-term-076ac7c6b8e8.mp3",
+      "kind": "specific-term",
+      "priority": 3,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 25
+      },
+      "note": "SRT KKT05 · ศัพท์เฉพาะจีน"
+    },
+    {
+      "id": "glossary-specific-term-44018bfa0ed9",
+      "label": "เฮยเฟิง",
+      "pronunciation": "เฮยเฟิง",
+      "aliases": [
+        "เฮยเฟิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-specific-term-44018bfa0ed9.mp3",
+      "kind": "specific-term",
+      "priority": 3,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 2
+      },
+      "note": "SRT KKT05 · ศัพท์เฉพาะจีน"
+    },
+    {
+      "id": "glossary-specific-term-f515d92b0c69",
+      "label": "โยวหมิง",
+      "pronunciation": "โยวหมิง",
+      "aliases": [
+        "โยวหมิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-specific-term-f515d92b0c69.mp3",
+      "kind": "specific-term",
+      "priority": 3,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT05"
+      ],
+      "occurrencesInSrt": {
+        "KKT05": 16
+      },
+      "note": "SRT KKT05 · ศัพท์เฉพาะจีน"
+    },
+    {
+      "id": "glossary-name-64d01d92e10d",
+      "label": "อวิ๋นเชียนเชียน",
+      "pronunciation": "อวิ๋นเชียนเชียน",
+      "aliases": [
+        "อวิ๋นเชียนเชียน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-64d01d92e10d.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 9
+      },
+      "note": "SRT KKT06 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-4226b42ba5ef",
+      "label": "ฉินโซ่ว",
+      "pronunciation": "ฉินโซ่ว",
+      "aliases": [
+        "ฉินโซ่ว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-4226b42ba5ef.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 10
+      },
+      "note": "SRT KKT06 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-d569abe7f293",
+      "label": "ชิวหย่า",
+      "pronunciation": "ชิวหย่า",
+      "aliases": [
+        "ชิวหย่า"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-d569abe7f293.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 50
+      },
+      "note": "SRT KKT06 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-fb670059cdc7",
+      "label": "หลี่ก่วง",
+      "pronunciation": "หลี่ก่วง",
+      "aliases": [
+        "หลี่ก่วง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-fb670059cdc7.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 3
+      },
+      "note": "SRT KKT06 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-c822a78b0d2e",
+      "label": "หวังจิ้น",
+      "pronunciation": "หวังจิ้น",
+      "aliases": [
+        "หวังจิ้น"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-c822a78b0d2e.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 1
+      },
+      "note": "SRT KKT06 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-7c8e04430d54",
+      "label": "เฉินอีอี",
+      "pronunciation": "เฉินอีอี",
+      "aliases": [
+        "เฉินอีอี"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-7c8e04430d54.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 1
+      },
+      "note": "SRT KKT06 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-1b5fa40b4f18",
+      "label": "เชียนเชียน",
+      "pronunciation": "เชียนเชียน",
+      "aliases": [
+        "เชียนเชียน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-1b5fa40b4f18.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 75
+      },
+      "note": "SRT KKT06 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-1292ce88d319",
+      "label": "เถียนเถียน",
+      "pronunciation": "เถียนเถียน",
+      "aliases": [
+        "เถียนเถียน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-1292ce88d319.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 16
+      },
+      "note": "SRT KKT06 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-976648efdab3",
+      "label": "เสิ่นเหมี่ยว",
+      "pronunciation": "เสิ่นเหมี่ยว",
+      "aliases": [
+        "เสิ่นเหมี่ยว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-976648efdab3.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 153
+      },
+      "note": "SRT KKT06 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-specific-term-e5f38db93118",
+      "label": "อวิ๋นติ่ง",
+      "pronunciation": "อวิ๋นติ่ง",
+      "aliases": [
+        "อวิ๋นติ่ง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-specific-term-e5f38db93118.mp3",
+      "kind": "specific-term",
+      "priority": 3,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT06"
+      ],
+      "occurrencesInSrt": {
+        "KKT06": 1
+      },
+      "note": "SRT KKT06 · ศัพท์เฉพาะจีน"
+    },
+    {
+      "id": "glossary-name-866c3b29cff2",
+      "label": "ม่านลู่",
+      "pronunciation": "ม่านลู่",
+      "aliases": [
+        "ม่านลู่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-866c3b29cff2.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT07"
+      ],
+      "occurrencesInSrt": {
+        "KKT07": 13
+      },
+      "note": "SRT KKT07 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-923feb2f8f42",
+      "label": "ลู่ซือเฉิน",
+      "pronunciation": "ลู่ซือเฉิน",
+      "aliases": [
+        "ลู่ซือเฉิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-923feb2f8f42.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT07"
+      ],
+      "occurrencesInSrt": {
+        "KKT07": 45
+      },
+      "note": "SRT KKT07 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-c71daf4d030c",
+      "label": "ลู่เทียนหลิน",
+      "pronunciation": "ลู่เทียนหลิน",
+      "aliases": [
+        "ลู่เทียนหลิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-c71daf4d030c.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT07"
+      ],
+      "occurrencesInSrt": {
+        "KKT07": 19
+      },
+      "note": "SRT KKT07 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-b338a204368f",
+      "label": "สวี่ฉีหู่",
+      "pronunciation": "สวี่ฉีหู่",
+      "aliases": [
+        "สวี่ฉีหู่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-b338a204368f.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT07"
+      ],
+      "occurrencesInSrt": {
+        "KKT07": 1
+      },
+      "note": "SRT KKT07 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-1aafb358d05f",
+      "label": "เสิ่นอวี้เหยา",
+      "pronunciation": "เสิ่นอวี้เหยา",
+      "aliases": [
+        "เสิ่นอวี้เหยา"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-1aafb358d05f.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT07"
+      ],
+      "occurrencesInSrt": {
+        "KKT07": 33
+      },
+      "note": "SRT KKT07 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-ef334268cfe7",
+      "label": "ฉู่ซิวหมิง",
+      "pronunciation": "ฉู่ซิวหมิง",
+      "aliases": [
+        "ฉู่ซิวหมิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-ef334268cfe7.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 8
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-d00de31f3af6",
+      "label": "ถังจิ่นเหนียน",
+      "pronunciation": "ถังจิ่นเหนียน",
+      "aliases": [
+        "ถังจิ่นเหนียน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-d00de31f3af6.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 13
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-f79f4eefcdb6",
+      "label": "ถังเสี่ยวเทียน",
+      "pronunciation": "ถังเสี่ยวเทียน",
+      "aliases": [
+        "ถังเสี่ยวเทียน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-f79f4eefcdb6.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 10
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-d5ed9959ffbb",
+      "label": "เจียงเจ๋อหลิน",
+      "pronunciation": "เจียงเจ๋อหลิน",
+      "aliases": [
+        "เจียงเจ๋อหลิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-d5ed9959ffbb.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 8
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-4f0f4fe0c60a",
+      "label": "จางเสี่ยว",
+      "pronunciation": "จางเสี่ยว",
+      "aliases": [
+        "จางเสี่ยว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-4f0f4fe0c60a.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 2
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-627480e041de",
+      "label": "ฉู่เจียวเจียว",
+      "pronunciation": "ฉู่เจียวเจียว",
+      "aliases": [
+        "ฉู่เจียวเจียว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-627480e041de.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 1
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-73f5af257232",
+      "label": "ถังเจิง",
+      "pronunciation": "ถังเจิง",
+      "aliases": [
+        "ถังเจิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-73f5af257232.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 6
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-eabb4e4afd6e",
+      "label": "ถังโหรว",
+      "pronunciation": "ถังโหรว",
+      "aliases": [
+        "ถังโหรว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-eabb4e4afd6e.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 20
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-a7e43b2b30d7",
+      "label": "อู๋โยว",
+      "pronunciation": "อู๋โยว",
+      "aliases": [
+        "อู๋โยว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-a7e43b2b30d7.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 80
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-c356910637c6",
+      "label": "เซียวเหิง",
+      "pronunciation": "เซียวเหิง",
+      "aliases": [
+        "เซียวเหิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-c356910637c6.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 7
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-0bd81d6e91a1",
+      "label": "โจวฮ่วน",
+      "pronunciation": "โจวฮ่วน",
+      "aliases": [
+        "โจวฮ่วน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-0bd81d6e91a1.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 1
+      },
+      "note": "SRT KKT08 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-specific-term-22ea4b1dff85",
+      "label": "เส้าหลิน",
+      "pronunciation": "เส้าหลิน",
+      "aliases": [
+        "เส้าหลิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-specific-term-22ea4b1dff85.mp3",
+      "kind": "specific-term",
+      "priority": 3,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT08"
+      ],
+      "occurrencesInSrt": {
+        "KKT08": 3
+      },
+      "note": "SRT KKT08 · ศัพท์เฉพาะจีน"
+    },
+    {
+      "id": "glossary-name-d69566e2375d",
+      "label": "กู้เจวียนเฉิน",
+      "pronunciation": "กู้เจวียนเฉิน",
+      "aliases": [
+        "กู้เจวียนเฉิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-d69566e2375d.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT09"
+      ],
+      "occurrencesInSrt": {
+        "KKT09": 9
+      },
+      "note": "SRT KKT09 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-aee8a7288c2f",
+      "label": "กู้เจวี้ยนเฉิน",
+      "pronunciation": "กู้เจวี้ยนเฉิน",
+      "aliases": [
+        "กู้เจวี้ยนเฉิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-aee8a7288c2f.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT09"
+      ],
+      "occurrencesInSrt": {
+        "KKT09": 14
+      },
+      "note": "SRT KKT09 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-7ca8babb3622",
+      "label": "ซ่งต้าห่าย",
+      "pronunciation": "ซ่งต้าห่าย",
+      "aliases": [
+        "ซ่งต้าห่าย"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-7ca8babb3622.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT09"
+      ],
+      "occurrencesInSrt": {
+        "KKT09": 12
+      },
+      "note": "SRT KKT09 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-fe65c0a09179",
+      "label": "ซ่งลั่วหว่าน",
+      "pronunciation": "ซ่งลั่วหว่าน",
+      "aliases": [
+        "ซ่งลั่วหว่าน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-fe65c0a09179.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT09"
+      ],
+      "occurrencesInSrt": {
+        "KKT09": 26
+      },
+      "note": "SRT KKT09 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-8b6d685ad5ad",
+      "label": "ซ่งฉือ",
+      "pronunciation": "ซ่งฉือ",
+      "aliases": [
+        "ซ่งฉือ"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-8b6d685ad5ad.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT09"
+      ],
+      "occurrencesInSrt": {
+        "KKT09": 89
+      },
+      "note": "SRT KKT09 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-9aa93b774d89",
+      "label": "เหลียงเส้าชิง",
+      "pronunciation": "เหลียงเส้าชิง",
+      "aliases": [
+        "เหลียงเส้าชิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-9aa93b774d89.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT09"
+      ],
+      "occurrencesInSrt": {
+        "KKT09": 36
+      },
+      "note": "SRT KKT09 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-e70212a4fdf0",
+      "label": "ฉินอวี่ชวน",
+      "pronunciation": "ฉินอวี่ชวน",
+      "aliases": [
+        "ฉินอวี่ชวน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-e70212a4fdf0.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 23
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-91e7e3444bb0",
+      "label": "ฉินเจิ้งฮว๋า",
+      "pronunciation": "ฉินเจิ้งฮว๋า",
+      "aliases": [
+        "ฉินเจิ้งฮว๋า"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-91e7e3444bb0.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 4
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-511689095914",
+      "label": "กู้เฉิง",
+      "pronunciation": "กู้เฉิง",
+      "aliases": [
+        "กู้เฉิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-511689095914.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 2
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-3504b2f23f3d",
+      "label": "จี้สือ",
+      "pronunciation": "จี้สือ",
+      "aliases": [
+        "จี้สือ"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-3504b2f23f3d.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 5
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-d089b20dff23",
+      "label": "ฉินชิง",
+      "pronunciation": "ฉินชิง",
+      "aliases": [
+        "ฉินชิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-d089b20dff23.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 1
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-441c66f99174",
+      "label": "ฉินหร่าน",
+      "pronunciation": "ฉินหร่าน",
+      "aliases": [
+        "ฉินหร่าน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-441c66f99174.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 38
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-0b817c1cae95",
+      "label": "ซูอิง",
+      "pronunciation": "ซูอิง",
+      "aliases": [
+        "ซูอิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-0b817c1cae95.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 1
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-93432b62fc9b",
+      "label": "ฟู่เจ๋อ",
+      "pronunciation": "ฟู่เจ๋อ",
+      "aliases": [
+        "ฟู่เจ๋อ"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-93432b62fc9b.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 8
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-b0c899526879",
+      "label": "ฟู่เฉิง",
+      "pronunciation": "ฟู่เฉิง",
+      "aliases": [
+        "ฟู่เฉิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-b0c899526879.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 10
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-c3d30932f7b8",
+      "label": "หลี่กั๋วชิ่ง",
+      "pronunciation": "หลี่กั๋วชิ่ง",
+      "aliases": [
+        "หลี่กั๋วชิ่ง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-c3d30932f7b8.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 1
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-282f9e7735f1",
+      "label": "หลี่ชุ่ยหง",
+      "pronunciation": "หลี่ชุ่ยหง",
+      "aliases": [
+        "หลี่ชุ่ยหง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-282f9e7735f1.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 7
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-675b1b844eea",
+      "label": "เฉียวเยว่",
+      "pronunciation": "เฉียวเยว่",
+      "aliases": [
+        "เฉียวเยว่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-675b1b844eea.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 3
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-610c7841a410",
+      "label": "เซี่ยชิงชิง",
+      "pronunciation": "เซี่ยชิงชิง",
+      "aliases": [
+        "เซี่ยชิงชิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-610c7841a410.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 1
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-70912e5afdd8",
+      "label": "โจวเจวียน",
+      "pronunciation": "โจวเจวียน",
+      "aliases": [
+        "โจวเจวียน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-70912e5afdd8.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 1
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-528f03f36054",
+      "label": "โจวเฉียง",
+      "pronunciation": "โจวเฉียง",
+      "aliases": [
+        "โจวเฉียง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-528f03f36054.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 1
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-8e4433a28a58",
+      "label": "โจวเมี่ยว",
+      "pronunciation": "โจวเมี่ยว",
+      "aliases": [
+        "โจวเมี่ยว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-8e4433a28a58.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT10"
+      ],
+      "occurrencesInSrt": {
+        "KKT10": 1
+      },
+      "note": "SRT KKT10 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-4cd3a2480889",
+      "label": "เสิ่นเนี่ยนเนี่ยน",
+      "pronunciation": "เสิ่นเนี่ยนเนี่ยน",
+      "aliases": [
+        "เสิ่นเนี่ยนเนี่ยน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-4cd3a2480889.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT11"
+      ],
+      "occurrencesInSrt": {
+        "KKT11": 53
+      },
+      "note": "SRT KKT11 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-fdb0df8d7b8d",
+      "label": "ลู่ตั่วตั่ว",
+      "pronunciation": "ลู่ตั่วตั่ว",
+      "aliases": [
+        "ลู่ตั่วตั่ว"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-fdb0df8d7b8d.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT11"
+      ],
+      "occurrencesInSrt": {
+        "KKT11": 2
+      },
+      "note": "SRT KKT11 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-12379e7f23ce",
+      "label": "ลู่เยี่ยน",
+      "pronunciation": "ลู่เยี่ยน",
+      "aliases": [
+        "ลู่เยี่ยน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-12379e7f23ce.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT11"
+      ],
+      "occurrencesInSrt": {
+        "KKT11": 53
+      },
+      "note": "SRT KKT11 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-64e3c449d184",
+      "label": "เซี่ยงหน่วน",
+      "pronunciation": "เซี่ยงหน่วน",
+      "aliases": [
+        "เซี่ยงหน่วน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-64e3c449d184.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT11"
+      ],
+      "occurrencesInSrt": {
+        "KKT11": 26
+      },
+      "note": "SRT KKT11 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-beb12b3b3ddf",
+      "label": "จางเฟิง",
+      "pronunciation": "จางเฟิง",
+      "aliases": [
+        "จางเฟิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-beb12b3b3ddf.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 6
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-f2c8732ae646",
+      "label": "ฉีโม่ไป๋",
+      "pronunciation": "ฉีโม่ไป๋",
+      "aliases": [
+        "ฉีโม่ไป๋"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-f2c8732ae646.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 11
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-bf0bda92e16f",
+      "label": "ฉู่หยุนเยว่",
+      "pronunciation": "ฉู่หยุนเยว่",
+      "aliases": [
+        "ฉู่หยุนเยว่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-bf0bda92e16f.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 4
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-84bed105f3ad",
+      "label": "ซูกั๋วลี่",
+      "pronunciation": "ซูกั๋วลี่",
+      "aliases": [
+        "ซูกั๋วลี่"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-84bed105f3ad.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 9
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-aa747275002e",
+      "label": "ซูเข่อซิน",
+      "pronunciation": "ซูเข่อซิน",
+      "aliases": [
+        "ซูเข่อซิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-aa747275002e.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 44
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-93383f8c3739",
+      "label": "ฟู่จิ้ง",
+      "pronunciation": "ฟู่จิ้ง",
+      "aliases": [
+        "ฟู่จิ้ง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-93383f8c3739.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 22
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-6e4ba5e3dcf0",
+      "label": "สวี่เยว่หมิง",
+      "pronunciation": "สวี่เยว่หมิง",
+      "aliases": [
+        "สวี่เยว่หมิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-6e4ba5e3dcf0.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 1
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-aa0a78f0327c",
+      "label": "เฉินป๋อทง",
+      "pronunciation": "เฉินป๋อทง",
+      "aliases": [
+        "เฉินป๋อทง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-aa0a78f0327c.mp3",
+      "kind": "name",
+      "priority": 1,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 2
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-b35bebba93c7",
+      "label": "จิ้งจิ้ง",
+      "pronunciation": "จิ้งจิ้ง",
+      "aliases": [
+        "จิ้งจิ้ง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-b35bebba93c7.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 8
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-place-f32d071e967e",
+      "label": "หยุนเยว่หวาน",
+      "pronunciation": "หยุนเยว่หวาน",
+      "aliases": [
+        "หยุนเยว่หวาน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-place-f32d071e967e.mp3",
+      "kind": "place",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 8
+      },
+      "note": "SRT KKT13 · ชื่อสถานที่/โครงการ"
+    },
+    {
+      "id": "glossary-place-f95795b7ea8d",
+      "label": "หลานสุ่ยอวิ๋น",
+      "pronunciation": "หลานสุ่ยอวิ๋น",
+      "aliases": [
+        "หลานสุ่ยอวิ๋น"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-place-f95795b7ea8d.mp3",
+      "kind": "place",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 2
+      },
+      "note": "SRT KKT13 · ชื่อสถานที่/โครงการ"
+    },
+    {
+      "id": "glossary-name-2f3450094087",
+      "label": "เข่อซิน",
+      "pronunciation": "เข่อซิน",
+      "aliases": [
+        "เข่อซิน"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-2f3450094087.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 13
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-place-566e9abbb518",
+      "label": "เป่าฮวาลี่อู้",
+      "pronunciation": "เป่าฮวาลี่อู้",
+      "aliases": [
+        "เป่าฮวาลี่อู้"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-place-566e9abbb518.mp3",
+      "kind": "place",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 1
+      },
+      "note": "SRT KKT13 · ชื่อสถานที่/โครงการ"
+    },
+    {
+      "id": "glossary-name-d1fc0be43173",
+      "label": "เยว่หมิง",
+      "pronunciation": "เยว่หมิง",
+      "aliases": [
+        "เยว่หมิง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-d1fc0be43173.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 8
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-name-f134fc027af8",
+      "label": "โม่ไป๋",
+      "pronunciation": "โม่ไป๋",
+      "aliases": [
+        "โม่ไป๋"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-name-f134fc027af8.mp3",
+      "kind": "name",
+      "priority": 2,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 11
+      },
+      "note": "SRT KKT13 · ชื่อบุคคล"
+    },
+    {
+      "id": "glossary-specific-term-453cf4656313",
+      "label": "หลงจิ่ง",
+      "pronunciation": "หลงจิ่ง",
+      "aliases": [
+        "หลงจิ่ง"
+      ],
+      "type": "file",
+      "file": "audio/glossary/glossary-specific-term-453cf4656313.mp3",
+      "kind": "specific-term",
+      "priority": 3,
+      "status": "candidate",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "occurrencesInSrt": {
+        "KKT13": 1
+      },
+      "note": "SRT KKT13 · ศัพท์เฉพาะจีน"
+    }
+  ],
+  "reviewQueue": [
+    {
+      "term": "หม่าผี",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "reason": "ปรากฏครั้งเดียวใน cue เดียว; ต้องยืนยันว่าเป็นชื่อบุคคลก่อนทำเสียง"
+    },
+    {
+      "term": "ซินซิน",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "reason": "ชื่อเรียกสั้น ปรากฏครั้งเดียว และยังไม่มีบริบทระบุผู้พูดชัดเจน"
+    },
+    {
+      "term": "ชิงชิง",
+      "sourceJobs": [
+        "KKT13"
+      ],
+      "reason": "ปรากฏครั้งเดียว; ยังไม่ยืนยันว่าเป็นชื่อบุคคลหรือคำเรียกในบท"
+    }
+  ]
+}

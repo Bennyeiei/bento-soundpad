@@ -8,6 +8,175 @@
   },
   "jobs": [
     {
+      "id": "KKT01",
+      "slug": "kkt01",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT01 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-7011ede613a7",
+        "glossary-name-6dca51518145",
+        "glossary-name-06e4e3c21bc2",
+        "glossary-name-ac9dd9478455"
+      ],
+      "sounds": []
+    },
+    {
+      "id": "KKT02",
+      "slug": "kkt02",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT02 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-6c28eb0f72d3",
+        "glossary-name-d3c067686550",
+        "glossary-name-8beebafe19b6",
+        "glossary-name-c0a88c246468",
+        "glossary-name-c46ab4a86c41",
+        "glossary-name-bbd55ad6efcc",
+        "glossary-name-8048bc69d9d5",
+        "glossary-name-3e152ab1e0d2",
+        "glossary-name-3115fd38a327",
+        "glossary-name-e304d17dd141",
+        "glossary-name-fc7261d36661"
+      ],
+      "sounds": []
+    },
+    {
+      "id": "KKT03",
+      "slug": "kkt03",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT03 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-96f40bac224b",
+        "glossary-name-b6633ac0e0e4",
+        "glossary-name-a05ad6181b9d",
+        "glossary-name-a1f891c250b1",
+        "glossary-name-3eec6b276de3",
+        "glossary-name-55e71ce29b20",
+        "glossary-name-80d15756bc9a",
+        "glossary-name-8454f10a103c",
+        "glossary-specific-term-0c4f5fc6ecc2"
+      ],
+      "sounds": []
+    },
+    {
+      "id": "KKT04",
+      "slug": "kkt04",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT04 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-6b426da6d234",
+        "glossary-name-766019d4c572",
+        "glossary-name-6d06177b5ac6",
+        "glossary-name-ad9a7ac90d0a",
+        "glossary-name-acc89731b174"
+      ],
+      "sounds": []
+    },
+    {
+      "id": "KKT05",
+      "slug": "kkt05",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT05 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-d401eb2ef07a",
+        "glossary-name-8207b5e25f13",
+        "glossary-name-158bf5aa7da5",
+        "glossary-name-71b8f67e509e",
+        "glossary-name-b51208d6ab3c",
+        "glossary-name-0ecf0c30c2de",
+        "glossary-name-bd9b21a67823",
+        "glossary-name-49663e91a3d4",
+        "glossary-name-ea220ff09c5f",
+        "glossary-name-e6ef4eac3b04",
+        "glossary-name-2960c15dd5aa",
+        "glossary-name-4b0769fadbd6",
+        "glossary-name-d6254633719d",
+        "glossary-specific-term-1b6def85e134",
+        "glossary-specific-term-076ac7c6b8e8",
+        "glossary-specific-term-44018bfa0ed9",
+        "glossary-specific-term-f515d92b0c69"
+      ],
+      "sounds": []
+    },
+    {
+      "id": "KKT06",
+      "slug": "kkt06",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT06 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-64d01d92e10d",
+        "glossary-name-4226b42ba5ef",
+        "glossary-name-d569abe7f293",
+        "glossary-name-fb670059cdc7",
+        "glossary-name-c822a78b0d2e",
+        "glossary-name-7c8e04430d54",
+        "glossary-name-1b5fa40b4f18",
+        "glossary-name-1292ce88d319",
+        "glossary-name-976648efdab3",
+        "glossary-specific-term-e5f38db93118"
+      ],
+      "sounds": []
+    },
+    {
+      "id": "KKT07",
+      "slug": "kkt07",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT07 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-866c3b29cff2",
+        "glossary-name-923feb2f8f42",
+        "glossary-name-c71daf4d030c",
+        "glossary-name-b338a204368f",
+        "glossary-name-1aafb358d05f"
+      ],
+      "sounds": []
+    },
+    {
+      "id": "KKT08",
+      "slug": "kkt08",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT08 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-ef334268cfe7",
+        "glossary-name-d00de31f3af6",
+        "glossary-name-f79f4eefcdb6",
+        "glossary-name-d5ed9959ffbb",
+        "glossary-name-4f0f4fe0c60a",
+        "glossary-name-627480e041de",
+        "glossary-name-73f5af257232",
+        "glossary-name-eabb4e4afd6e",
+        "glossary-name-a7e43b2b30d7",
+        "glossary-name-c356910637c6",
+        "glossary-name-0bd81d6e91a1",
+        "glossary-specific-term-22ea4b1dff85"
+      ],
+      "sounds": []
+    },
+    {
+      "id": "KKT09",
+      "slug": "kkt09",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT09 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-d69566e2375d",
+        "glossary-name-aee8a7288c2f",
+        "glossary-name-7ca8babb3622",
+        "glossary-name-fe65c0a09179",
+        "glossary-name-8b6d685ad5ad",
+        "glossary-name-9aa93b774d89"
+      ],
+      "sounds": []
+    },
+    {
       "id": "KKT10",
       "slug": "kkt10",
       "title": "บทพากย์ / ไกด์เสียง",
@@ -833,7 +1002,39 @@
           "file": "audio/kkt10/kkt10-guide-052.mp3",
           "note": "ไกด์เสียงจากคอลัมน์ไกด์เสียง"
         }
+      ],
+      "glossaryRefs": [
+        "glossary-name-e70212a4fdf0",
+        "glossary-name-91e7e3444bb0",
+        "glossary-name-511689095914",
+        "glossary-name-3504b2f23f3d",
+        "glossary-name-d089b20dff23",
+        "glossary-name-441c66f99174",
+        "glossary-name-0b817c1cae95",
+        "glossary-name-93432b62fc9b",
+        "glossary-name-b0c899526879",
+        "glossary-name-c3d30932f7b8",
+        "glossary-name-282f9e7735f1",
+        "glossary-name-675b1b844eea",
+        "glossary-name-610c7841a410",
+        "glossary-name-70912e5afdd8",
+        "glossary-name-528f03f36054",
+        "glossary-name-8e4433a28a58"
       ]
+    },
+    {
+      "id": "KKT11",
+      "slug": "kkt11",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT11 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-4cd3a2480889",
+        "glossary-name-fdb0df8d7b8d",
+        "glossary-name-12379e7f23ce",
+        "glossary-name-64e3c449d184"
+      ],
+      "sounds": []
     },
     {
       "id": "KKT12",
@@ -1657,7 +1858,34 @@
           "file": "audio/kkt12/kkt12-glossary-049.mp3",
           "note": "ศัพท์ / สิ่งของ / ยา · หน่วยเงิน เช่น สามอีแปะ"
         }
-      ]
+      ],
+      "glossaryRefs": []
+    },
+    {
+      "id": "KKT13",
+      "slug": "kkt13",
+      "title": "คำทับศัพท์จาก SRT",
+      "source": "KKT13 — SRT คำทับศัพท์",
+      "status": "active",
+      "glossaryRefs": [
+        "glossary-name-beb12b3b3ddf",
+        "glossary-name-f2c8732ae646",
+        "glossary-name-bf0bda92e16f",
+        "glossary-name-84bed105f3ad",
+        "glossary-name-aa747275002e",
+        "glossary-name-93383f8c3739",
+        "glossary-name-6e4ba5e3dcf0",
+        "glossary-name-aa0a78f0327c",
+        "glossary-name-b35bebba93c7",
+        "glossary-place-f32d071e967e",
+        "glossary-place-f95795b7ea8d",
+        "glossary-name-2f3450094087",
+        "glossary-place-566e9abbb518",
+        "glossary-name-d1fc0be43173",
+        "glossary-name-f134fc027af8",
+        "glossary-specific-term-453cf4656313"
+      ],
+      "sounds": []
     }
   ]
 }

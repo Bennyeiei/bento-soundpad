@@ -20,26 +20,60 @@ export function matchesSound(sound, query) {
   return !needle || searchableText(sound).includes(needle);
 }
 
-function withKind(job, kind) {
-  return { ...job, kind, sounds: Array.isArray(job.sounds) ? job.sounds : [] };
+function soundIdentity(sound) {
+  return normalizeText(sound?.label).replace(/\s+/g, '');
+}
+
+function centralTermsById(glossary) {
+  return new Map((glossary?.terms ?? [])
+    .filter((term) => term && typeof term.id === 'string')
+    .map((term) => [term.id, term]));
+}
+
+export function resolveGlossarySounds(job, glossary) {
+  const inlineSounds = Array.isArray(job?.sounds) ? job.sounds : [];
+  const byId = centralTermsById(glossary);
+  const seen = new Set(inlineSounds.map(soundIdentity).filter(Boolean));
+  const referencedSounds = (Array.isArray(job?.glossaryRefs) ? job.glossaryRefs : [])
+    .map((id) => byId.get(id))
+    .filter(Boolean)
+    .filter((term) => {
+      const identity = soundIdentity(term);
+      if (!identity || seen.has(identity)) return false;
+      seen.add(identity);
+      return true;
+    })
+    .map((term) => ({ ...term }));
+  return [...inlineSounds, ...referencedSounds];
+}
+
+function withKind(job, kind, glossary) {
+  return {
+    ...job,
+    kind,
+    sounds: resolveGlossarySounds(job, glossary),
+  };
 }
 
 export async function loadCatalog() {
-  const [currentResponse, legacyResponse] = await Promise.all([
+  const [currentResponse, legacyResponse, glossaryResponse] = await Promise.all([
     fetch(new URL('../data/jobs.json', import.meta.url), { cache: 'no-store' }),
     fetch(new URL('../data/legacy-jobs.json', import.meta.url), { cache: 'no-store' }),
+    fetch(new URL('../data/glossary.json', import.meta.url), { cache: 'no-store' }),
   ]);
-  if (!currentResponse.ok || !legacyResponse.ok) {
+  if (!currentResponse.ok || !legacyResponse.ok || !glossaryResponse.ok) {
     throw new Error('โหลด catalog ของงานไม่สำเร็จ');
   }
-  const [current, legacy] = await Promise.all([
+  const [current, legacy, glossary] = await Promise.all([
     currentResponse.json(),
     legacyResponse.json(),
+    glossaryResponse.json(),
   ]);
   return {
     branding: current.branding ?? {},
-    jobs: (current.jobs ?? []).map((job) => withKind(job, 'job')),
-    legacyJobs: (legacy.jobs ?? []).map((job) => withKind(job, 'legacy')),
+    glossary,
+    jobs: (current.jobs ?? []).map((job) => withKind(job, 'job', glossary)),
+    legacyJobs: (legacy.jobs ?? []).map((job) => withKind(job, 'legacy', glossary)),
   };
 }
 
