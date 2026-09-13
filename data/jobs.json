@@ -1050,7 +1050,7 @@
           "aliases": [
             "谢明兰",
             "Xiè Mínglán",
-            "หมิงหลาน"
+            "เซี่ยหมิงหลาน"
           ],
           "type": "file",
           "tts": {
@@ -1061,27 +1061,43 @@
           "note": "F1 · หญิงหลัก · คุณหนูใหญ่สายตรง / ฮูหยินเอกอัครเสนาบดี / ฮูหยินตราตั้งขั้นหนึ่ง"
         },
         {
-          "id": "kkt12-glossary-002",
-          "label": "เผยเหิง (วัยเด็ก)",
-          "pronunciation": "เผย เหิง วัย เด็ก",
+          "id": "kkt12-glossary-001-2",
+          "label": "หมิงหลาน",
+          "pronunciation": "หมิง หลาน",
           "aliases": [
-            "裴珩 (幼年)",
-            "裴珩",
-            "Péi Héng",
-            "เผยเหิง"
+            "谢明兰",
+            "Xiè Mínglán",
+            "หมิงหลาน"
           ],
           "type": "file",
           "tts": {
             "lang": "th-TH",
             "rate": 0.85
           },
-          "file": "audio/kkt12/kkt12-glossary-002.mp3",
-          "note": "F1 · หญิงหลัก · เวอร์ชันวัยเด็ก"
+          "file": "audio/kkt12/kkt12-glossary-001-2.mp3",
+          "note": "F1 · หญิงหลัก · คุณหนูใหญ่สายตรง / ฮูหยินเอกอัครเสนาบดี / ฮูหยินตราตั้งขั้นหนึ่ง"
         },
         {
           "id": "kkt12-glossary-003",
           "label": "เซี่ยโม่หลาน",
           "pronunciation": "เซี่ย โม่ หลาน",
+          "aliases": [
+            "谢墨兰",
+            "Xiè Mòlán",
+            "เซี่ยโม่หลาน"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-003.mp3",
+          "note": "F2 · หญิงรอง / นางร้าย · คุณหนูรองลูกอนุ / ภรรยาเผยซืออัน"
+        },
+        {
+          "id": "kkt12-glossary-003-2",
+          "label": "โม่หลาน",
+          "pronunciation": "โม่ หลาน",
           "aliases": [
             "谢墨兰",
             "Xiè Mòlán",
@@ -1092,7 +1108,7 @@
             "lang": "th-TH",
             "rate": 0.85
           },
-          "file": "audio/kkt12/kkt12-glossary-003.mp3",
+          "file": "audio/kkt12/kkt12-glossary-003-2.mp3",
           "note": "F2 · หญิงรอง / นางร้าย · คุณหนูรองลูกอนุ / ภรรยาเผยซืออัน"
         },
         {
@@ -1113,14 +1129,12 @@
         },
         {
           "id": "kkt12-glossary-005",
-          "label": "องค์ชายเก้า / เสียวจิ่ว",
-          "pronunciation": "องค์ชายเก้า, เสียวจิ่ว",
+          "label": "องค์ชายเก้า",
+          "pronunciation": "องค์ชายเก้า",
           "aliases": [
             "九皇子",
-            "小九",
             "Jiǔ Huángzǐ",
-            "Xiǎo Jiǔ",
-            "เสียวจิ่ว"
+            "องค์ชายเก้า"
           ],
           "type": "file",
           "tts": {
@@ -1131,12 +1145,30 @@
           "note": "F3 · หญิงสมทบ / เชื้อพระวงศ์ · ปลอมเป็นเณรน้อย"
         },
         {
+          "id": "kkt12-glossary-005-2",
+          "label": "เสียวจิ่ว",
+          "pronunciation": "เสียวจิ่ว",
+          "aliases": [
+            "小九",
+            "Xiǎo Jiǔ",
+            "เสียวจิ่ว"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-005-2.mp3",
+          "note": "F3 · หญิงสมทบ / เชื้อพระวงศ์ · ปลอมเป็นเณรน้อย"
+        },
+        {
           "id": "kkt12-glossary-006",
-          "label": "แม่เผยเหิง / ฮูหยินผู้เฒ่าเผย",
-          "pronunciation": "แม่เผยเหิง, ฮูหยินผู้เฒ่าเผย",
+          "label": "แม่เผยเหิง",
+          "pronunciation": "แม่เผยเหิง",
           "aliases": [
             "裴母",
-            "Péi Mǔ"
+            "Péi Mǔ",
+            "แม่เผยเหิง"
           ],
           "type": "file",
           "tts": {
@@ -1147,13 +1179,30 @@
           "note": "F3 · หญิงสมทบ / เชื้อพระวงศ์"
         },
         {
+          "id": "kkt12-glossary-006-2",
+          "label": "ฮูหยินผู้เฒ่าเผย",
+          "pronunciation": "ฮูหยินผู้เฒ่าเผย",
+          "aliases": [
+            "裴母",
+            "Péi Mǔ",
+            "ฮูหยินผู้เฒ่าเผย"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-006-2.mp3",
+          "note": "F3 · หญิงสมทบ / เชื้อพระวงศ์"
+        },
+        {
           "id": "kkt12-glossary-007",
-          "label": "ไป๋รั่ว / รั่วรั่ว",
-          "pronunciation": "ไป๋รั่ว, รั่วรั่ว",
+          "label": "ไป๋รั่ว",
+          "pronunciation": "ไป๋รั่ว",
           "aliases": [
             "白若",
             "Bái Ruò",
-            "รั่วรั่ว"
+            "ไป๋รั่ว"
           ],
           "type": "file",
           "tts": {
@@ -1164,9 +1213,44 @@
           "note": "F4 · หญิงสมทบ / ตัวร้าย · หญิงสาวข้ามมิติจากยุคปัจจุบัน / ญาติผู้น้องจอมปลอม"
         },
         {
+          "id": "kkt12-glossary-007-2",
+          "label": "รั่วรั่ว",
+          "pronunciation": "รั่วรั่ว",
+          "aliases": [
+            "白若",
+            "Bái Ruò",
+            "รั่วรั่ว"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-007-2.mp3",
+          "note": "F4 · หญิงสมทบ / ตัวร้าย · หญิงสาวข้ามมิติจากยุคปัจจุบัน / ญาติผู้น้องจอมปลอม"
+        },
+        {
           "id": "kkt12-glossary-008",
-          "label": "แม่รอง / แม่รองหลิน",
-          "pronunciation": "แม่รอง, แม่รองหลิน",
+          "label": "แม่รอง",
+          "pronunciation": "แม่รอง",
+          "aliases": [
+            "林小娘",
+            "继母",
+            "Lín Xiǎoniáng",
+            "แม่รอง"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-008.mp3",
+          "note": "F4 · หญิงสมทบ / ตัวร้าย · อนุภรรยาพ่อเซี่ย / แม่ของโม่หลาน"
+        },
+        {
+          "id": "kkt12-glossary-008-2",
+          "label": "แม่รองหลิน",
+          "pronunciation": "แม่รองหลิน",
           "aliases": [
             "林小娘",
             "继母",
@@ -1178,24 +1262,8 @@
             "lang": "th-TH",
             "rate": 0.85
           },
-          "file": "audio/kkt12/kkt12-glossary-008.mp3",
+          "file": "audio/kkt12/kkt12-glossary-008-2.mp3",
           "note": "F4 · หญิงสมทบ / ตัวร้าย · อนุภรรยาพ่อเซี่ย / แม่ของโม่หลาน"
-        },
-        {
-          "id": "kkt12-glossary-009",
-          "label": "สาวใช้โม่หลาน",
-          "pronunciation": "สาวใช้โม่หลาน",
-          "aliases": [
-            "墨兰丫鬟",
-            "Mòlán Yāhuan"
-          ],
-          "type": "file",
-          "tts": {
-            "lang": "th-TH",
-            "rate": 0.85
-          },
-          "file": "audio/kkt12/kkt12-glossary-009.mp3",
-          "note": "F4 · หญิงสมทบ / ตัวร้าย"
         },
         {
           "id": "kkt12-glossary-010",
@@ -1215,12 +1283,12 @@
         },
         {
           "id": "kkt12-glossary-011",
-          "label": "เผยซืออัน / ซืออัน",
-          "pronunciation": "เผย ซือ อัน, ซือ อัน",
+          "label": "เผยซืออัน",
+          "pronunciation": "เผย ซือ อัน",
           "aliases": [
             "裴思安",
             "Péi Sī'ān",
-            "ซืออัน"
+            "เผยซืออัน"
           ],
           "type": "file",
           "tts": {
@@ -1231,13 +1299,30 @@
           "note": "M2 · ชายรอง / ตัวร้ายชาย · หลานชายเผยเหิง / อดีตซื่อจื่อแห่งจวนหลินอันโหว"
         },
         {
+          "id": "kkt12-glossary-011-2",
+          "label": "ซืออัน",
+          "pronunciation": "ซือ อัน",
+          "aliases": [
+            "裴思安",
+            "Péi Sī'ān",
+            "ซืออัน"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-011-2.mp3",
+          "note": "M2 · ชายรอง / ตัวร้ายชาย · หลานชายเผยเหิง / อดีตซื่อจื่อแห่งจวนหลินอันโหว"
+        },
+        {
           "id": "kkt12-glossary-012",
-          "label": "เซี่ยจื้อหย่วน / พ่อเซี่ย",
-          "pronunciation": "เซี่ย จื้อ หย่วน, พ่อเซี่ย",
+          "label": "เซี่ยจื้อหย่วน",
+          "pronunciation": "เซี่ย จื้อ หย่วน",
           "aliases": [
             "谢致远",
             "Xiè Zhìyuǎn",
-            "พ่อเซี่ย"
+            "เซี่ยจื้อหย่วน"
           ],
           "type": "file",
           "tts": {
@@ -1248,11 +1333,28 @@
           "note": "M3 · ชายอาวุโส / ตัวประกอบ · รองเสนาบดีกรมพิธีการ / บิดาของหมิงหลานและโม่หลาน"
         },
         {
-          "id": "kkt12-glossary-013",
-          "label": "พี่ใหญ่ (ความทรงจำ)",
-          "pronunciation": "พี่ใหญ่, ความทรงจำ",
+          "id": "kkt12-glossary-012-2",
+          "label": "พ่อเซี่ย",
+          "pronunciation": "พ่อเซี่ย",
           "aliases": [
-            "大哥 (记忆)",
+            "谢致远",
+            "Xiè Zhìyuǎn",
+            "พ่อเซี่ย"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-012-2.mp3",
+          "note": "M3 · ชายอาวุโส / ตัวประกอบ · รองเสนาบดีกรมพิธีการ / บิดาของหมิงหลานและโม่หลาน"
+        },
+        {
+          "id": "kkt12-glossary-013",
+          "label": "พี่ใหญ่",
+          "pronunciation": "พี่ใหญ่",
+          "aliases": [
+            "大哥",
             "Dàgē",
             "พี่ใหญ่"
           ],
@@ -1262,12 +1364,30 @@
             "rate": 0.85
           },
           "file": "audio/kkt12/kkt12-glossary-013.mp3",
-          "note": "M3 · ชายอาวุโส / ตัวประกอบ · บิดาของเผยซืออัน / ผู้มีพระคุณของเผยเหิง"
+          "note": "M3 · ชายอาวุโส / ตัวประกอบ · บิดาของเผยซืออัน / ผู้มีพระคุณของเผยเหิง · ความทรงจำ"
         },
         {
           "id": "kkt12-glossary-014",
-          "label": "คนคุมบ่อน / เจ้าของบ่อน",
-          "pronunciation": "คนคุมบ่อน, เจ้าของบ่อน",
+          "label": "คนคุมบ่อน",
+          "pronunciation": "คนคุมบ่อน",
+          "aliases": [
+            "庄家",
+            "赌徒",
+            "Zhuāngjiā",
+            "คนคุมบ่อน"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-014.mp3",
+          "note": "M3 · ชายอาวุโส / ตัวประกอบ"
+        },
+        {
+          "id": "kkt12-glossary-014-2",
+          "label": "เจ้าของบ่อน",
+          "pronunciation": "เจ้าของบ่อน",
           "aliases": [
             "庄家",
             "赌徒",
@@ -1279,27 +1399,8 @@
             "lang": "th-TH",
             "rate": 0.85
           },
-          "file": "audio/kkt12/kkt12-glossary-014.mp3",
+          "file": "audio/kkt12/kkt12-glossary-014-2.mp3",
           "note": "M3 · ชายอาวุโส / ตัวประกอบ"
-        },
-        {
-          "id": "kkt12-glossary-015",
-          "label": "ฮ่องเต้ / ฝ่าบาท",
-          "pronunciation": "ฮ่องเต้, ฝ่าบาท",
-          "aliases": [
-            "皇帝",
-            "圣上",
-            "Huángdì",
-            "Shèngshang",
-            "ฝ่าบาท"
-          ],
-          "type": "file",
-          "tts": {
-            "lang": "th-TH",
-            "rate": 0.85
-          },
-          "file": "audio/kkt12/kkt12-glossary-015.mp3",
-          "note": "M4 · ชายสมทบ / ราชสำนัก"
         },
         {
           "id": "kkt12-glossary-016",
@@ -1351,11 +1452,26 @@
         },
         {
           "id": "kkt12-glossary-019",
-          "label": "อัครมหาเสนาบดี / ใต้เท้าเก๋อเหล่า",
-          "pronunciation": "อัครมหาเสนาบดี, ใต้เท้าเก๋อเหล่า",
+          "label": "อัครมหาเสนาบดี",
+          "pronunciation": "อัครมหาเสนาบดี",
           "aliases": [
             "内阁首辅",
             "Nèigé Shǒufǔ",
+            "อัครมหาเสนาบดี"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-019.mp3",
+          "note": "ตำแหน่ง / บรรดาศักดิ์ / ราชสำนัก"
+        },
+        {
+          "id": "kkt12-glossary-019-2",
+          "label": "ใต้เท้าเก๋อเหล่า",
+          "pronunciation": "ใต้เท้าเก๋อเหล่า",
+          "aliases": [
             "阁老",
             "ใต้เท้าเก๋อเหล่า"
           ],
@@ -1364,7 +1480,7 @@
             "lang": "th-TH",
             "rate": 0.85
           },
-          "file": "audio/kkt12/kkt12-glossary-019.mp3",
+          "file": "audio/kkt12/kkt12-glossary-019-2.mp3",
           "note": "ตำแหน่ง / บรรดาศักดิ์ / ราชสำนัก"
         },
         {
@@ -1433,11 +1549,12 @@
         },
         {
           "id": "kkt12-glossary-024",
-          "label": "กรมพระคลัง / กรมการคลัง",
-          "pronunciation": "กรมพระคลัง, กรมการคลัง",
+          "label": "กรมพระคลัง",
+          "pronunciation": "กรมพระคลัง",
           "aliases": [
             "户部",
-            "Hùbù"
+            "Hùbù",
+            "กรมพระคลัง"
           ],
           "type": "file",
           "tts": {
@@ -1445,6 +1562,23 @@
             "rate": 0.85
           },
           "file": "audio/kkt12/kkt12-glossary-024.mp3",
+          "note": "ตำแหน่ง / บรรดาศักดิ์ / ราชสำนัก"
+        },
+        {
+          "id": "kkt12-glossary-024-2",
+          "label": "กรมการคลัง",
+          "pronunciation": "กรมการคลัง",
+          "aliases": [
+            "户部",
+            "Hùbù",
+            "กรมการคลัง"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-024-2.mp3",
           "note": "ตำแหน่ง / บรรดาศักดิ์ / ราชสำนัก"
         },
         {
@@ -1517,13 +1651,12 @@
         },
         {
           "id": "kkt12-glossary-029",
-          "label": "ท่านอารอง / ท่านอาสะใภ้รอง",
-          "pronunciation": "ท่านอารอง, ท่านอาสะใภ้รอง",
+          "label": "ท่านอารอง",
+          "pronunciation": "ท่านอารอง",
           "aliases": [
             "二叔",
-            "二婶",
             "Èrshū",
-            "Èrshěn"
+            "ท่านอารอง"
           ],
           "type": "file",
           "tts": {
@@ -1534,12 +1667,30 @@
           "note": "เครือญาติ / สถานะในเรือน"
         },
         {
+          "id": "kkt12-glossary-029-2",
+          "label": "ท่านอาสะใภ้รอง",
+          "pronunciation": "ท่านอาสะใภ้รอง",
+          "aliases": [
+            "二婶",
+            "Èrshěn",
+            "ท่านอาสะใภ้รอง"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-029-2.mp3",
+          "note": "เครือญาติ / สถานะในเรือน"
+        },
+        {
           "id": "kkt12-glossary-030",
-          "label": "ท่านเขย / ลูกเขย",
-          "pronunciation": "ท่านเขย, ลูกเขย",
+          "label": "ท่านเขย",
+          "pronunciation": "ท่านเขย",
           "aliases": [
             "姑爷",
-            "Gūye"
+            "Gūye",
+            "ท่านเขย"
           ],
           "type": "file",
           "tts": {
@@ -1547,6 +1698,23 @@
             "rate": 0.85
           },
           "file": "audio/kkt12/kkt12-glossary-030.mp3",
+          "note": "เครือญาติ / สถานะในเรือน"
+        },
+        {
+          "id": "kkt12-glossary-030-2",
+          "label": "ลูกเขย",
+          "pronunciation": "ลูกเขย",
+          "aliases": [
+            "姑爷",
+            "Gūye",
+            "ลูกเขย"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-030-2.mp3",
           "note": "เครือญาติ / สถานะในเรือน"
         },
         {
@@ -1743,14 +1911,13 @@
         },
         {
           "id": "kkt12-glossary-043",
-          "label": "ยาว่านโซ่ว / ยาฝิ่น",
-          "pronunciation": "ยาว่านโซ่ว, ยาฝิ่น",
+          "label": "ยาว่านโซ่ว",
+          "pronunciation": "ยาว่านโซ่ว",
           "aliases": [
             "万寿膏",
             "福寿膏",
-            "鸦片",
             "Wànshòugāo",
-            "Yāpiàn"
+            "ยาว่านโซ่ว"
           ],
           "type": "file",
           "tts": {
@@ -1758,6 +1925,23 @@
             "rate": 0.85
           },
           "file": "audio/kkt12/kkt12-glossary-043.mp3",
+          "note": "ศัพท์ / สิ่งของ / ยา"
+        },
+        {
+          "id": "kkt12-glossary-043-2",
+          "label": "ยาฝิ่น",
+          "pronunciation": "ยาฝิ่น",
+          "aliases": [
+            "鸦片",
+            "Yāpiàn",
+            "ยาฝิ่น"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-043-2.mp3",
           "note": "ศัพท์ / สิ่งของ / ยา"
         },
         {
@@ -1810,13 +1994,12 @@
         },
         {
           "id": "kkt12-glossary-047",
-          "label": "ชาติก่อน / ย้อนเวลามาเกิดใหม่",
-          "pronunciation": "ชาติก่อน, ย้อนเวลามาเกิดใหม่",
+          "label": "ชาติก่อน",
+          "pronunciation": "ชาติก่อน",
           "aliases": [
             "前世",
-            "重生",
             "Qiánshì",
-            "Chóngshēng"
+            "ชาติก่อน"
           ],
           "type": "file",
           "tts": {
@@ -1824,6 +2007,23 @@
             "rate": 0.85
           },
           "file": "audio/kkt12/kkt12-glossary-047.mp3",
+          "note": "ศัพท์ / สิ่งของ / ยา · แนวคิดเรื่องอดีตชาติและการเกิดใหม่"
+        },
+        {
+          "id": "kkt12-glossary-047-2",
+          "label": "ย้อนเวลามาเกิดใหม่",
+          "pronunciation": "ย้อนเวลามาเกิดใหม่",
+          "aliases": [
+            "重生",
+            "Chóngshēng",
+            "ย้อนเวลามาเกิดใหม่"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-047-2.mp3",
           "note": "ศัพท์ / สิ่งของ / ยา · แนวคิดเรื่องอดีตชาติและการเกิดใหม่"
         },
         {
@@ -1844,11 +2044,12 @@
         },
         {
           "id": "kkt12-glossary-049",
-          "label": "อีแปะ / เหรียญทองแดง",
-          "pronunciation": "อีแปะ, เหรียญทองแดง",
+          "label": "อีแปะ",
+          "pronunciation": "อีแปะ",
           "aliases": [
             "文",
-            "Wén"
+            "Wén",
+            "อีแปะ"
           ],
           "type": "file",
           "tts": {
@@ -1856,6 +2057,23 @@
             "rate": 0.85
           },
           "file": "audio/kkt12/kkt12-glossary-049.mp3",
+          "note": "ศัพท์ / สิ่งของ / ยา · หน่วยเงิน เช่น สามอีแปะ"
+        },
+        {
+          "id": "kkt12-glossary-049-2",
+          "label": "เหรียญทองแดง",
+          "pronunciation": "เหรียญทองแดง",
+          "aliases": [
+            "文",
+            "Wén",
+            "เหรียญทองแดง"
+          ],
+          "type": "file",
+          "tts": {
+            "lang": "th-TH",
+            "rate": 0.85
+          },
+          "file": "audio/kkt12/kkt12-glossary-049-2.mp3",
           "note": "ศัพท์ / สิ่งของ / ยา · หน่วยเงิน เช่น สามอีแปะ"
         }
       ],

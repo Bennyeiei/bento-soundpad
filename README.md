@@ -16,7 +16,7 @@ The sidebar keeps the original one-page behavior: selecting a job swaps the visi
 
 - `data/glossary.json`: central, append-only candidate glossary for clean Thai terms from KKT01-KKT13 SRT files. Exact spelling variants remain separate. The `reviewQueue` is collected for later confirmation but is not shown as a sound card.
 - `data/jobs.json`: current job catalog. Each job uses `glossaryRefs` to pull only its central terms. KKT10 retains its confirmed inline `ไกด์เสียง` cards; KKT12 retains its supplied `Chinese-Thai Drama Glossary · KKT12_01` cards and is not copied into the central file.
-- `data/kkt12-job.json`: source-shaped KKT12 glossary seed with 49 character, title, kinship, place, event, object, drug, and terminology entries.
+- `data/kkt12-job.json`: source-shaped KKT12 glossary seed with 62 clean character, title, kinship, place, event, object, drug, and terminology entries. Alternate names are separate cards; display-only age/role notes stay in `note`, and easy generic `ฮ่องเต้`/`ฝ่าบาท` plus `สาวใช้โม่หลาน` are not cards.
 - `data/legacy-jobs.json`: read-only projection of the original `sounds.json` categories.
 - `sounds.json`: retained as the original compatibility source and snapshot evidence.
 - `data/schema.md`: field, central-glossary, and URL contract.
