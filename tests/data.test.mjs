@@ -24,8 +24,8 @@ test('current catalog contains the cleaned KKT12 glossary job', () => {
   assert.ok(job);
   assert.equal(job.slug, 'kkt12');
   assert.equal(job.source, 'Chinese-Thai Drama Glossary · KKT12_01');
-  assert.equal(job.sounds.length, 62);
-  assert.equal(seed.sounds.length, 62);
+  assert.equal(job.sounds.length, 61);
+  assert.equal(seed.sounds.length, 61);
   assert.deepEqual(job.sounds.map((sound) => sound.label), seed.sounds.map((sound) => sound.label));
   assert.ok(job.sounds.some((sound) => sound.aliases.includes('谢明兰')));
   assert.ok(job.sounds.every((sound) => sound.type === 'file' && sound.file?.startsWith('audio/kkt12/')));
@@ -53,6 +53,7 @@ test('KKT12 keeps difficult terms as separate clean cards', () => {
   assert.equal(labels.includes('ฮ่องเต้ / ฝ่าบาท'), false);
   assert.equal(labels.includes('ฮ่องเต้'), false);
   assert.equal(labels.includes('ฝ่าบาท'), false);
+  assert.equal(labels.some((label) => /ฮ่องเต้|ฝ่าบาท/.test(label)), false);
   assert.ok(labels.every((label) => !/[\\/()[\\]]/.test(label)));
   assert.ok(job.sounds.every((sound) => !/[\\/()[\\]]/.test(sound.pronunciation)));
 });
