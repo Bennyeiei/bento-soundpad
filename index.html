@@ -44,12 +44,6 @@
     }
 
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px;margin-top:12px}
-    /* โทรศัพท์: สองชื่อต่อแถว ปุ่มเล็กลง จะได้ไม่ต้องเลื่อนหาชื่อ */
-    @media (max-width: 520px){
-      .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-      .pad{width:88px;height:88px}
-      .card h3{font-size:16px}
-    }
     .card{background:linear-gradient(180deg,#0c1420,#0a1018);border:1px solid #1b2a40;border-radius:16px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:10px}
     .card h3{font-size:20px;margin:0;color:#e8f3ff;line-height:1.25;text-align:center}
     .meta{font-size:12px;color:#9fb3c8;text-align:center}
@@ -57,7 +51,6 @@
     .pad{width:140px;height:140px;border-radius:999px;border:none;position:relative;display:grid;place-items:center;cursor:pointer;box-shadow:inset 0 -6px 0 rgba(0,0,0,.35), 0 6px 16px rgba(0,0,0,.35);}
     .pad.red{background:radial-gradient(35% 35% at 50% 30%, #ff8c8c, #ff3d3d 60%, #c11414 80%), linear-gradient(180deg,var(--pad-red2),var(--pad-red1));}
     .pad.green{background:radial-gradient(35% 35% at 50% 30%, #a7ffb7, #52e47a 60%, #138f32 80%), linear-gradient(180deg,var(--pad-green2),var(--pad-green1));}
-    .pad.pink{background:radial-gradient(35% 35% at 50% 30%, #ffc2e2, #ff79b8 60%, #b8256b 80%), linear-gradient(180deg,#4a1830,#2b0e1c);}
     .pad.blue{background:radial-gradient(35% 35% at 50% 30%, #a6d8ff, #64b9ff 60%, #1766a8 80%), linear-gradient(180deg,var(--pad-blue2),var(--pad-blue1));}
     .pad:active{transform:translateY(1px)}
     .pad img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:999px;opacity:.9;mix-blend:screen;filter:saturate(130%)}
@@ -181,31 +174,12 @@
       a.addEventListener('pause', () => state.active.delete(a));
       return a;
     }
-    // คำที่ยังไม่ได้อัด: อ่านด้วยเสียงอ่านภาษาไทยของเครื่อง (TTS)
-    function sayText(text){
-      if(!('speechSynthesis' in window)){ alert('เครื่องนี้ไม่มีเสียงอ่านอัตโนมัติ'); return; }
-      if(state.solo){ stopAll(); }
-      speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = 'th-TH';
-      const voices = speechSynthesis.getVoices();
-      const voice = voices.find(v => /^th/i.test(v.lang));
-      if(voice) u.voice = voice;
-      else if(voices.length && !sayText.warned){
-        sayText.warned = true;
-        alert('คำนี้ยังไม่ได้อัดเสียง และเครื่องนี้ไม่มีเสียงอ่านภาษาไทย · ลองเปิดด้วย Chrome/Edge หรือในมือถือ');
-      }
-      const speed = parseFloat((document.getElementById('speed')||{}).value || '1');
-      u.rate = Math.max(0.5, Math.min(1.5, 0.85 * speed));
-      speechSynthesis.speak(u);
-    }
-    function playSound(src, fallbackText){
+    function playSound(src){
       if(state.solo){ stopAll(); }
       const a = makeAudio(src);
       state.active.add(a);
       a.play().catch(err=>{
         console.warn('เล่นเสียงไม่สำเร็จ:', err, 'src=', src);
-        if(fallbackText && err?.name !== 'NotAllowedError'){ sayText(fallbackText); return; }
         alert(`เล่นเสียงไม่สำเร็จ
 ${err?.name||'Error'}
 ไฟล์: ${src}
@@ -213,7 +187,6 @@ ${err?.name||'Error'}
       });
     }
     function stopAll(){
-      try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch{}
       for(const a of Array.from(state.active)){
         try{ a.pause(); a.currentTime = 0; }catch{}
       }
@@ -244,12 +217,10 @@ ${err?.name||'Error'}
       const q = state.search.trim().toLowerCase();
       const showCat = state.category;
       const list = [];
-      const seen = new Set();          // "ทั้งหมด": a word in several jobs shows once
       for(const cat of state.data.categories){
         if(showCat !== 'all' && cat.id !== showCat) continue;
         for(const s of cat.sounds){
           const name = (s.name||'').toLowerCase();
-          if(showCat === 'all'){ if(seen.has(name)) continue; seen.add(name); }
           if(!q || name.includes(q)) list.push({...s, _cat: cat});
         }
       }
@@ -260,7 +231,7 @@ ${err?.name||'Error'}
       els.grid.innerHTML = '';
       const sounds = filterSounds();
       sounds.forEach((s)=>{
-        const pad = h('button', {class:'pad '+(s.color||'red'), onclick:()=> s.file ? playSound(s.file, s.name) : sayText(s.say || s.name), 'aria-label':`เล่นเสียง ${s.name}`}, [
+        const pad = h('button', {class:'pad '+(s.color||'red'), onclick:()=>playSound(s.file), 'aria-label':`เล่นเสียง ${s.name}`}, [
           s.image ? h('img', {class:'bg', src:s.image, alt:''}) : null,
           h('span', {class:'play'}, '▶')
         ]);
