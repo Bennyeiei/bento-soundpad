@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "about": "คลังเสียงอ่านชื่อ · หนึ่งคำหนึ่งไฟล์ ใช้ได้ทุกงาน · match: any = ชื่อผู้พูด+บทพูด, speaker = ชื่อผู้พูดอย่างเดียว",
+  "words": [
+    {
+      "word": "ซ่งจิ่น",
+      "file": "audio/library/ซ่งจิ่น.mp3",
+      "aliases": [],
+      "match": "any",
+      "added": "2025-10-21"
+    },
+    {
+      "word": "ลั่วหมี่",
+      "file": "audio/library/ลั่วหมี่.mp3",
+      "aliases": [],
+      "match": "any",
+      "added": "2025-10-21"
+    },
+    {
+      "word": "หมี่หลาน",
+      "file": "audio/library/หมี่หลาน.mp3",
+      "aliases": [],
+      "match": "any",
+      "added": "2025-10-21"
+    },
+    {
+      "word": "หยุนเสี่ยง",
+      "file": "audio/library/หยุนเสี่ยง.mp3",
+      "aliases": [],
+      "match": "any",
+      "added": "2025-10-21"
+    },
+    {
+      "word": "เสี่ยวขุ่ย",
+      "file": "audio/library/เสี่ยวขุ่ย.mp3",
+      "aliases": [],
+      "match": "any",
+      "added": "2025-10-21"
+    },
+    {
+      "word": "เสี่ยวเช่อ",
+      "file": "audio/library/เสี่ยวเช่อ.mp3",
+      "aliases": [],
+      "match": "any",
+      "added": "2025-10-21"
+    },
+    {
+      "word": "เหล่าเซียม",
+      "file": "audio/library/เหล่าเซียม.mp3",
+      "aliases": [],
+      "match": "any",
+      "added": "2025-10-21"
+    }
+  ],
+  "ignore": [
+    "บรรยาย",
+    "เสียงบรรยาย",
+    "หมู่มวล",
+    "หมู่มวลชาย",
+    "หมู่มวลหญิง",
+    "ตัวหนังสือ"
+  ]
+}

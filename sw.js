@@ -1,5 +1,5 @@
 // sw.js
-const CACHE_NAME = 'bubble-voice-v5';  // เปลี่ยนชื่อทุกครั้งที่แก้ SW
+const CACHE_NAME = 'bubble-voice-v6';  // เปลี่ยนชื่อทุกครั้งที่แก้ SW
 const CORE_ASSETS = [
   './',
   './manifest.webmanifest'

@@ -12,7 +12,7 @@
       "sounds": [
         {
           "name": "เสี่ยวขุ่ย",
-          "file": "audio/kkm15/เสี่ยวขุ่ย.mp3",
+          "file": "audio/library/เสี่ยวขุ่ย.mp3",
           "hotkey": "1",
           "color": "red"
         }
@@ -24,38 +24,80 @@
       "sounds": [
         {
           "name": "ซ่งจิ่น",
-          "file": "audio/kkm17/ซ่งจิ่น.mp3",
+          "file": "audio/library/ซ่งจิ่น.mp3",
           "hotkey": "1",
           "color": "blue"
         },
         {
           "name": "ลั่วหมี่",
-          "file": "audio/kkm17/ลั่วหมี่.mp3",
+          "file": "audio/library/ลั่วหมี่.mp3",
           "hotkey": "2",
           "color": "pink"
         },
         {
           "name": "หมี่หลาน",
-          "file": "audio/kkm17/หมี่หลาน.mp3",
+          "file": "audio/library/หมี่หลาน.mp3",
           "hotkey": "3",
           "color": "pink"
         },
         {
           "name": "หยุนเสี่ยง",
-          "file": "audio/kkm17/หยุนเสี่ยง.mp3",
+          "file": "audio/library/หยุนเสี่ยง.mp3",
           "hotkey": "4",
           "color": "pink"
         },
         {
           "name": "เสี่ยวเช่อ",
-          "file": "audio/kkm17/เสี่ยวเช่อ.mp3",
+          "file": "audio/library/เสี่ยวเช่อ.mp3",
           "hotkey": "5",
           "color": "blue"
         },
         {
           "name": "เหล่าเซียม",
-          "file": "audio/kkm17/เหล่าเซียม.mp3",
+          "file": "audio/library/เหล่าเซียม.mp3",
           "hotkey": "6",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "library",
+      "name": "📚 คลังเสียง",
+      "auto": true,
+      "sounds": [
+        {
+          "name": "ซ่งจิ่น",
+          "file": "audio/library/ซ่งจิ่น.mp3",
+          "color": "blue"
+        },
+        {
+          "name": "ลั่วหมี่",
+          "file": "audio/library/ลั่วหมี่.mp3",
+          "color": "blue"
+        },
+        {
+          "name": "หมี่หลาน",
+          "file": "audio/library/หมี่หลาน.mp3",
+          "color": "blue"
+        },
+        {
+          "name": "หยุนเสี่ยง",
+          "file": "audio/library/หยุนเสี่ยง.mp3",
+          "color": "blue"
+        },
+        {
+          "name": "เสี่ยวขุ่ย",
+          "file": "audio/library/เสี่ยวขุ่ย.mp3",
+          "color": "blue"
+        },
+        {
+          "name": "เสี่ยวเช่อ",
+          "file": "audio/library/เสี่ยวเช่อ.mp3",
+          "color": "blue"
+        },
+        {
+          "name": "เหล่าเซียม",
+          "file": "audio/library/เหล่าเซียม.mp3",
           "color": "blue"
         }
       ]
