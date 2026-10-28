@@ -1,57 +1,15 @@
-// sw.js
-const CACHE_NAME = 'bubble-voice-v5';  // เปลี่ยนชื่อทุกครั้งที่แก้ SW
-const CORE_ASSETS = [
-  './',
-  './manifest.webmanifest'
-  // ไม่แคช './index.html' เพื่อลดโอกาสค้างหน้าเก่า
-];
-
-// ติดตั้ง
-self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(CORE_ASSETS)));
-  self.skipWaiting();
+// HTML and catalogue must stay fresh after a new library publication.
+const CACHE_NAME = 'kkt-voice-v6-20261028';
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', event => {
+  event.waitUntil(caches.keys().then(keys => Promise.all(
+    keys.filter(key => /^(bubble-voice-|kkt-voice-)/.test(key) && key !== CACHE_NAME)
+      .map(key => caches.delete(key))
+  )).then(() => self.clients.claim()));
 });
-
-// เปิดใช้งาน
-self.addEventListener('activate', (e) => {
-  e.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
-    )
-  );
-  self.clients.claim();
-});
-
-// จัดนโยบายแคช
-self.addEventListener('fetch', (e) => {
-  const url = new URL(e.request.url);
-
-  // 1) เสียง: ไม่แคช ปล่อยโหลดสด
-  if (/\.(mp3|m4a|wav|ogg)$/i.test(url.pathname)) return;
-
-  // 2) sounds.json: network-first (สดก่อน ถ้าออฟไลน์ค่อยใช้แคช)
-  if (url.pathname.endsWith('/sounds.json')) {
-    e.respondWith(
-      fetch(e.request, { cache: 'no-store' }).then(res => {
-        const copy = res.clone();
-        caches.open(CACHE_NAME).then(c => c.put(e.request, copy));
-        return res;
-      }).catch(() => caches.match(e.request))
-    );
-    return;
-  }
-
-  // 3) อื่น ๆ : cache-first + ใส่แคชภายหลัง (stale-while-revalidate แบบง่าย)
-  e.respondWith(
-    caches.match(e.request).then(res => {
-      const fetchPromise = fetch(e.request).then(netRes => {
-        if (e.request.method === 'GET' && netRes.ok && netRes.type === 'basic') {
-          const copy = netRes.clone();
-          caches.open(CACHE_NAME).then(c => c.put(e.request, copy));
-        }
-        return netRes;
-      });
-      return res || fetchPromise;
-    })
-  );
+self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin || /\.(mp3|m4a|wav|ogg|aac|flac)$/i.test(url.pathname)) return;
+  event.respondWith(fetch(event.request, { cache: 'no-cache' }));
 });
